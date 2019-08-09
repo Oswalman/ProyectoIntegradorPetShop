@@ -1,2 +1,2 @@
 # ProyectoIntegradorSINBEC
-Sistema de información para consulta de becas estudiantiles.
+El proyecto que busca salvar el mundo
