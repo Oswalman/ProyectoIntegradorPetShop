@@ -2,9 +2,8 @@
   "name": "package",
   "version": "1.0.0",
   "description": "Proyecto enfocado a las mascotas",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec @babel/node ./server.js"
   },
   "author": "Oswalman",
   "repository": {
@@ -13,11 +12,12 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^7.1.5",
     "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
@@ -27,5 +27,10 @@
     "webpack": "^4.39.2",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-livereload-plugin": "^2.2.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   }
 }
