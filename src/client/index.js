@@ -1,12 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-
+import Header from './header';
 import './style/style.css';
 
 const App = () => {
-  return <h1>
-    Hello World React and Node
-  </h1>
+  return <Header/>
 };
 
 render(
