@@ -13,16 +13,11 @@ class Header extends React.Component {
     this.toggleSidenav= this.toggleSidenav.bind(this);
   }
 
-
-
-
   toggleSidenav() {
     this.setState(state =>(
       {
         boolean: !state.boolean
-      }));
-   
-    
+      })); 
 }
 
     render() 
