@@ -11,6 +11,12 @@ app.use(webpackDevMiddleware(webpack(webpackConfig)));
 app.get('/',(req,res)=>{
     res.send('Hello');
 })
+
+app.get('/login', (req,res)=>
+{
+    res.send('hello');
+})
+
 app.listen(app.get('port'), () =>{
     console.log('server on', app.get('port'))
 });

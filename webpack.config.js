@@ -54,7 +54,7 @@ export default {
   },
   plugins: [
     new htmlWebpackPlugin({
-      template: 'src/client/index.html'
+      template: 'src/client/views/home/index.html'
     }),
     new LiveReloadPlugin()
   ]
