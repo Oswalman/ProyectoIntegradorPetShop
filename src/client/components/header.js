@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import './style/style.css';
-import './style/icons/styles.css';
+import '.././style/style.css';
+import '.././style/icons/styles.css';
 
 var btmenu = document.getElementById("btn-menu");
   var nav = document.getElementById("nav");
