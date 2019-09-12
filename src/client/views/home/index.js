@@ -3,11 +3,8 @@ import { render } from 'react-dom';
 import Header from '../../components/header';
 import '../../style/style.css';
 
-const App = () => {
+const Home = () => {
   return <Header/>
 };
 
-render(
-  <App/>,
-  document.getElementById('app')
-);
+export default Home;

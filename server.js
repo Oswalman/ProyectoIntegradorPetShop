@@ -8,14 +8,13 @@ const app=express();
 
 app.set('port', process.env.PORT || 3000);
 app.use(webpackDevMiddleware(webpack(webpackConfig)));
-app.get('/',(req,res)=>{
-    res.send('Hello');
-})
 
+/*
 app.get('/login', (req,res)=>
 {
-    res.send('hello');
-})
+    res.sendFile( __dirname + "/src/client/views/login/" + "index.html" );
+})*/
+
 
 app.listen(app.get('port'), () =>{
     console.log('server on', app.get('port'))

@@ -3,9 +3,10 @@ import htmlWebpackPlugin from 'html-webpack-plugin';
 import LiveReloadPlugin from 'webpack-livereload-plugin';
 
 export default {
-  entry: './src/client/views/home/index.js',
+  entry: './src/index.js',
   output: {
     path: '/',
+    publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
@@ -54,7 +55,7 @@ export default {
   },
   plugins: [
     new htmlWebpackPlugin({
-      template: 'src/client/views/home/index.html'
+      template: 'public/index.html'
     }),
     new LiveReloadPlugin()
   ]
