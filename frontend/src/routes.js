@@ -1,6 +1,6 @@
 import React from 'react';
 
-import  Home  from './client/views/Home';
+import  Home  from './client/views/home';
 import  Login  from './client/views/Login';
 
 import  NoMatch  from './client/views/NoMatch';
