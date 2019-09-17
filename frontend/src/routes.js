@@ -2,7 +2,7 @@ import React from 'react';
 
 import  Home  from './client/views/home';
 import  Login  from './client/views/Login';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import  NoMatch  from './client/views/NoMatch';
 import  NavBar  from './client/components/header';
 import { Route, Switch, Redirect } from 'react-router-dom';
