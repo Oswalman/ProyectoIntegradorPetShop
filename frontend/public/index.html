@@ -5,10 +5,32 @@
     <meta charset="UTF-8">
     <title>Pet safe</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
-   
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/nivo-slider.css">
+    <link rel="stylesheet" href="themes/light/light.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.nivo.slider.js"></script>
+
+    <script type="text/javascript"> 
+        $(window).on('load',function(){
+            $('#slider').nivoSlider();
+        });
+    </script>
+
   </head>
   <body>
-    <div id="root"></div>
-  
+    <div class="slider-wrapper theme-light">
+      <div id="slider" class="Slider">
+        <img src="img/1.png" alt=""/>
+        <img src="img/2.png" alt="" title="#htmlcaption"/>
+        <img src="img/3.png" alt="" title="Hellou"/>
+      </div>
+      <div>
+          <div id="htmlcaption" class="nivo-html-caption">
+            <h1>Gracias por visitar</h1>
+          </div>
+        </div>
+    </div>
   </body>
 </html>
