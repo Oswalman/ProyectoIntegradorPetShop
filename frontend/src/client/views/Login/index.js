@@ -1,25 +1,36 @@
 import React from 'react';
 import { render } from 'react-dom';
-
+import '../../style/estilos.css';
+import '../../style/fonts.css';
 //import '../../style/login.css';
 
 const Login = () => {
 	return (
-<div class="form-container sign-up-container">
-	<form action="#">
-		<h1>¡Crea tu cuenta!</h1>
-		<div class="social-container">
-			<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-			<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-			<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+		<div className="contenedor">
+
+		<header>
+		  <h1 classclassName="title">Petsafe</h1>
+		  <a href="">Registrate_Falta</a>
+		</header>
+  
+		<div className="login">
+		  <article className="fondo">
+			<img src="../../img/LogoPetSafe.png" alt="User"></img>
+			<h3>Inicio de Sesión</h3>
+			<form className="" action="index.html" method="post">
+
+			  <span className="icon-user"></span>
+			  <input class="inp" type="text" name="user" value=""></input>
+			  <br></br>
+			  <span className="icon-key"></span><input class="inp" type="password" name="pass" value=""></input>
+			  <br></br>
+			  <a href="" className="he">He olvidado mi contraseña</a>
+			  <input className="boton" type="submit" name="inicio" value="Iniciar Sesión"></input>
+			</form>
+		  </article>
 		</div>
-		<span>o usa un correo electronico</span>
-		<input type="text" placeholder="Name" />
-		<input type="email" placeholder="Email" />
-		<input type="password" placeholder="Password" />
-		<button>CREAR</button>
-	</form>
-</div>
+  
+	  </div>
 
 );
   };
