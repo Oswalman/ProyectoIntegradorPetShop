@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {boolean: true,
-      location: this.props.location
+    this.state = {boolean: true
+    
     };
 
     this.toggleSidenav= this.toggleSidenav.bind(this);
@@ -36,11 +36,11 @@ class Header extends React.Component {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item active">
-              <Link to="/home" className="nav-item nav-link">Home<span className="sr-only">(current)</span></Link>
+              <Link to="/home" className="nav-link">Home<span className="sr-only">(current)</span></Link>
                
               </li>
               <li className="nav-item">
-              <Link to="/shop" className="nav-item nav-link">Tienda</Link>
+              <Link to="/shop" className="nav-link">Tienda</Link>
                 
               </li>
              

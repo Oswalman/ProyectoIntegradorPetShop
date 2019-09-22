@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import '../../style/estilos.css';
 import '../../style/fonts.css';
 //import '../../style/login.css';
+import foto from '../../img/LogoPetSafe.png'
 
 const Login = () => {
 	return (
@@ -15,7 +16,7 @@ const Login = () => {
   
 		<div className="login">
 		  <article className="fondo">
-			<img src="../../img/LogoPetSafe.png" alt="User"></img>
+			<img src={foto} alt="User"></img>
 			<h3>Inicio de Sesión</h3>
 			<form className="" action="index.html" method="post">
 
