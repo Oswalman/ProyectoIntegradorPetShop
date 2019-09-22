@@ -28,39 +28,39 @@ class Header extends React.Component {
         
           
         <nav className="navbar navbar-expand-lg navbar-light bg-info">
-          <div class="container-fluid">
+          <div className="container-fluid">
           <Link to="/home" className="navbar-brand">PetSafe</Link>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-              <Link to="/home" className="nav-item nav-link">Home<span class="sr-only">(current)</span></Link>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item active">
+              <Link to="/home" className="nav-item nav-link">Home<span className="sr-only">(current)</span></Link>
                
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
               <Link to="/shop" className="nav-item nav-link">Tienda</Link>
                 
               </li>
              
-              <li class="nav-item">
+              <li className="nav-item">
               <Link to="/get" className="nav-link">Adopción</Link>
                 
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
               <Link to="/search" className="nav-link">Busqueda</Link>
                 
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
               <Link to="/about" className="nav-link">Acerca de </Link>
             
               </li>
             
               
             </ul>
-            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-            <li class="nav-item">
+            <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <li className="nav-item">
               <Link to="/login" className="nav-link">Login</Link>
                 
               </li>
