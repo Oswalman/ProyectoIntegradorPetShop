@@ -3,16 +3,11 @@ body{
     background-size: cover;
 }
 
-
-
-
 .main{
     margin: 0 auto;
-    margin-top: 25%;
+    margin-top: 15%;
     padding: 0;
 }
-
-
 
 .inicioS{
     opacity: 1;
@@ -21,7 +16,7 @@ body{
 
 .user-img{
     margin-top: -50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .user-img img{
