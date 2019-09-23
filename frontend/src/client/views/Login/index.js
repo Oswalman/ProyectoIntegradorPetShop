@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import '../../style/login.css';
 import '../../style/bootstrap.css';
 import foto from '../../img/LogoPetSafe.png'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 	return (
@@ -29,12 +30,14 @@ const Login = () => {
 
 				<pre></pre>
                 <div className="col-12">
-                    <a href="">Olvidaste tu contraseña</a>
+                    
+                    <Link to="/forgot">Olvidaste tu contraseña</Link>
                 </div>
 				<pre></pre>
 
                 <div class="col-12">
-                    <a href="/Registro">Registrate</a>
+                <Link to="/Register">Registrate</Link>
+                   
                 </div>
             </div>
         </div>

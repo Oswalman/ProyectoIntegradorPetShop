@@ -2,8 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import '../../style/login.css';
 import foto from '../../img/LogoPetSafe.png'
+import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Register = () => {
 	return (
 		<div className="modal-dialog text-center">
         <div className="col-sm-8 main">
@@ -37,13 +38,11 @@ const Login = () => {
 
 				<pre></pre>
                 <div className="col-12">
-                    <a href="">Iniciar Sesion</a>
+                   
+                    <Link to="/login" className="nav-link">Iniciar Sesion</Link>
                 </div>
 				<pre></pre>
 
-                <div class="col-12">
-                    <a to="/login" className="nav-link">Login</a>
-                </div>
             </div>
         </div>
     </div>
@@ -52,7 +51,7 @@ const Login = () => {
   };
 
 
-export default Login;
+export default Register;
   
 
 
