@@ -2,6 +2,7 @@ const notesCtrl = {};
 
 
 
+
 notesCtrl.getNotes = async (req, res) => {
    
     res.send("getpost");
