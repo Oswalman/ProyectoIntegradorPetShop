@@ -14,7 +14,7 @@ const Register = () => {
                     <img src={foto} className="mb-2"></img>
                 </div>  
 
-                <h1 className="h3 mb-3 font-weight-normal inicioS">INICIO DE SESION</h1>
+                <h1 className="h3 mb-3 font-weight-normal inicioS">Registro de Usuario</h1>
                <pre></pre>
 
                 <form className="col-12">
@@ -43,6 +43,9 @@ const Register = () => {
                 </div>
 				<pre></pre>
 
+                <div class="col-12">
+                    <a href="/login">Login</a>
+                </div>
             </div>
         </div>
     </div>
