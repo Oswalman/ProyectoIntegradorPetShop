@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import '../../style/login.css';
 import foto from '../../img/LogoPetSafe.png'
 
-const Login = () => {
+const Registro = () => {
 	return (
 		<div className="modal-dialog text-center">
         <div className="col-sm-8 main">
@@ -13,7 +13,7 @@ const Login = () => {
                     <img src={foto} className="mb-2"></img>
                 </div>  
 
-                <h1 className="h3 mb-3 font-weight-normal inicioS">INICIO DE SESION</h1>
+                <h1 className="h3 mb-3 font-weight-normal inicioS">Registro de Usuario</h1>
                <pre></pre>
 
                 <form className="col-12">
@@ -42,7 +42,7 @@ const Login = () => {
 				<pre></pre>
 
                 <div class="col-12">
-                    <a to="/login" className="nav-link">Login</a>
+                    <a href="/login">Login</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@ const Login = () => {
   };
 
 
-export default Login;
+export default Registro;
   
 
 
