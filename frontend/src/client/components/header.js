@@ -61,10 +61,8 @@ class Header extends React.Component {
             </ul>
             <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
             <li className="nav-item">
-              <Link to="/login" className="nav-link">Login</Link>
-                
-              </li>
-
+              <Link to="/login" className="nav-link">Login</Link>                
+            </li>
             </ul>
           </div>
           </div>

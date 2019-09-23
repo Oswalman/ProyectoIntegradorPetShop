@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import '../../style/login.css';
-import '../../style/bootstrap.css';
 import foto from '../../img/LogoPetSafe.png'
 
 const Login = () => {
@@ -14,7 +13,7 @@ const Login = () => {
                     <img src={foto} className="mb-2"></img>
                 </div>  
 
-                <h1 className="h5 mb-3 inicioS">INICIO DE SESION</h1>
+                <h1 className="h3 mb-3 font-weight-normal inicioS">INICIO DE SESION</h1>
                <pre></pre>
 
                 <form className="col-12">
@@ -22,19 +21,28 @@ const Login = () => {
                         <input type="text" className="form-control" placeholder="Nombre de usuario"></input>
                     </div>
                     <div className="form-group">
+                        <input type="text" className="form-control" placeholder="E-mail"></input>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" className="form-control" placeholder="Dirección"></input>
+                    </div>
+                    <div className="form-group">
                         <input type="password" className="form-control" placeholder="Contraseña"></input>
-                    </div>   
-                    <button type="submit" className="btn btn-primary" >Inicio sesion</button>             
+                    </div> 
+                    <div className="form-group">
+                        <input type="password" className="form-control" placeholder="Confirmar Contraseña"></input>
+                    </div>  
+                    <button type="submit" className="btn btn-primary" >Registrarse</button>             
                 </form>
 
 				<pre></pre>
                 <div className="col-12">
-                    <a href="">Olvidaste tu contraseña</a>
+                    <a href="">Iniciar Sesion</a>
                 </div>
 				<pre></pre>
 
                 <div class="col-12">
-                    <a href="/Registro">Registrate</a>
+                    <a to="/login" className="nav-link">Login</a>
                 </div>
             </div>
         </div>
