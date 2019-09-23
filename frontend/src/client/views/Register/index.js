@@ -43,9 +43,7 @@ const Register = () => {
                 </div>
 				<pre></pre>
 
-                <div class="col-12">
-                    <a href="/login">Login</a>
-                </div>
+               
             </div>
         </div>
     </div>
