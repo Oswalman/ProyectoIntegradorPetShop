@@ -4,6 +4,7 @@ import '../../style/login.css';
 import foto from '../../img/LogoPetSafe.png'
 import { Link } from 'react-router-dom';
 
+
 const Register = () => {
 	return (
 		<div className="modal-dialog text-center">

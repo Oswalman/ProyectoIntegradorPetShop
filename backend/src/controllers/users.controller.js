@@ -7,9 +7,11 @@ userCtrl.getUsers = async (req, res) => {
     res.json(users);
 };
 userCtrl.getUser = async (req, res) => {
+    const {CorreoCliente, ClaveCliente}=req.body;
     const user=await User.findOne(
         {
-        CorreoCliente:req.params.CorreoCliente
+        CorreoCliente:CorreoCliente,
+        ClaveCliente:ClaveCliente
     })
     console.log(req.params.CorreoCliente)
     console.log(user)

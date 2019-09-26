@@ -7,8 +7,8 @@ router.route('/')
     .get(getUsers)
     .post(createUser);
 
-router.route('/:CorreoCliente')
-    .get(getUser)
+router.route('/login')
+    .post(getUser)
     .delete(deleteUser);
 
 module.exports = router;
