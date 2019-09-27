@@ -5,7 +5,51 @@ import foto from '../../img/LogoPetSafe.png'
 import { Link } from 'react-router-dom';
 
 
-const Register = () => {
+class Register extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {CorreoCliente: '',
+        ClaveCliente: '',
+        DirecciónCliente:'',
+        SexoCliente:'',
+        TipoUsuario:1
+     };
+     this.compar=this.compar.bind(this);
+    }
+    performLogin(elem){
+        elem.preventDefault()
+        var url = 'http://localhost:4000/api/users/';
+
+        let data = this.state;
+      
+            fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers:{
+                'Content-Type': 'application/json'
+            }
+            }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => console.log('Success:', response)); 
+
+    }
+
+    onChange(elem) {
+        this.setState({[elem.target.name] : elem.target.value})
+    }
+    compar(elem)
+    {
+        if(elem.target.value!==this.ClaveCliente){
+            return false;
+        }
+
+        else {
+            return true;
+        }
+
+    }
+    
+    render(){
 	return (
 		<div className="modal-dialog text-center">
         <div className="col-sm-8 main">
@@ -18,23 +62,27 @@ const Register = () => {
                 <h1 className="h3 mb-3 font-weight-normal inicioS">Registro de Usuario</h1>
                <pre></pre>
 
-                <form className="col-12">
+                <form onSubmit={this.performLogin} className="col-12">
                     <div className="form-group">
-                        <input type="text" className="form-control" placeholder="Nombre de usuario"></input>
+                        <input type="text" className="form-control" name="CorreoCliente" placeholder="E-mail"></input>
                     </div>
                     <div className="form-group">
-                        <input type="text" className="form-control" placeholder="E-mail"></input>
+                        <select name="SexoCliente" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                        <option value="1">Masculino</option> 
+                         <option value="2">Femenino</option> 
+                        </select>
+                       
                     </div>
                     <div className="form-group">
-                        <input type="text" className="form-control" placeholder="Dirección"></input>
+                        <input type="text" className="form-control" name="DireccionCliente" placeholder="Dirección"></input>
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-control" placeholder="Contraseña"></input>
+                        <input type="password" className="form-control" name="ClaveCliente" placeholder="Contraseña"></input>
                     </div> 
                     <div className="form-group">
-                        <input type="password" className="form-control" placeholder="Confirmar Contraseña"></input>
+                        <input type="password" className="form-control" onChange={this.compar} placeholder="Confirmar Contraseña"></input>
                     </div>  
-                    <button type="submit" className="btn btn-primary" >Registrarse</button>             
+                    <button type="submit" disabled={this.compar} className="btn btn-primary" >Registrarse</button>             
                 </form>
 
 				<pre></pre>
@@ -49,7 +97,7 @@ const Register = () => {
         </div>
     </div>
 
-);
+);}
   };
 
 

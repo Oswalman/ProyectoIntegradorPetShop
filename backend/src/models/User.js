@@ -2,8 +2,8 @@ const {Schema, model}= require('mongoose');
 
 const userSchema=new Schema({
     //idCliente: {type: Number, required:true, unique: true, trim: true},
-    CorreoCliente: String,
-    ClaveCliente: String,
+    CorreoCliente: {type: String, unique: true, trim: true, required: true},
+    ClaveCliente: {type: String, required: true},
     NombreCliente: String,
     DireccionCliente: String,
     SexoCliente: String,
