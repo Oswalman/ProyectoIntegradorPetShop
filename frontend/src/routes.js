@@ -6,6 +6,7 @@ import  Register  from './client/views/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  NoMatch  from './client/views/NoMatch';
 import  NavBar  from './client/components/header';
+import Footer from './client/components/footer';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 
@@ -27,6 +28,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         
         
       </Switch>
+      <Footer></Footer>
       
     </div>
   );

@@ -93,7 +93,7 @@ class Login extends React.Component {
                     </div>   
                     <button type="submit" className="btn btn-primary" >Inicio sesion</button>
                     <br></br>
-                    <span class="badge badge-danger">{this.state.errors.Incorrect}</span>        
+                    <span className="badge badge-danger">{this.state.errors.Incorrect}</span>        
                 </form>
                  
                 
