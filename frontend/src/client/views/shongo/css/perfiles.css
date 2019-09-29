@@ -1,0 +1,17 @@
+.containerP{
+    background: #D7E6E5;
+}
+
+.img{
+    margin-right:auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: black;
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+.pf{
+    text-align: center;
+}
