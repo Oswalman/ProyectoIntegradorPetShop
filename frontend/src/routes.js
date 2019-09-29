@@ -2,6 +2,7 @@ import React from 'react';
 
 import  Home  from './client/views/home';
 import  Login  from './client/views/Login';
+import  About  from './client/views/About';
 import  Register  from './client/views/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  NoMatch  from './client/views/NoMatch';
@@ -22,6 +23,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         </Route>
         
         <Route exact path="/login" component={Login} />
+        <Route exact path="/about" component={About} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Home} />
         <Route component={NoMatch} />
