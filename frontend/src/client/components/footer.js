@@ -12,7 +12,7 @@ class footer extends Component {
 
     render() {
         return (
-        <footer className="page-footer text-white bg-dark">
+        <footer className="page-footer text-white bg-dark ">
 
             <div className="bg-primary">
                 <div className="container-fluid">

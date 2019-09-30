@@ -4,6 +4,7 @@ import '../../style/bootstrap.css';
 import foto from '../../img/LogoPetSafe.png'
 import { Link } from 'react-router-dom';
 import validateInput from '../../validations/login';
+//import {connect} from 'react-redux';
 
 /*
 const getList = () => {
