@@ -35,10 +35,11 @@ class Register extends React.Component {
 
         let data = {CorreoCliente: this.state.CorreoCliente,
                     ClaveCliente: this.state.ClaveCliente,
-                    NombreCliente:this.NombreCliente,
-                    DireccionCliente: this.DireccionCliente,
-                    SexoCliente: this.SexoCliente,
-                    TipoUsuario: this.TipoUsuario}
+                    NombreCliente:this.state.NombreCliente,
+                    DireccionCliente: this.state.DireccionCliente,
+                    SexoCliente: this.state.SexoCliente,
+                    TipoUsuario: this.state.TipoUsuario}
+                    console.log(data);
       
             fetch(url, {
             method: 'POST', // or 'PUT'
@@ -47,11 +48,21 @@ class Register extends React.Component {
                 'Content-Type': 'application/json'
             }
             }).then(res => res.json())
-            .catch(error => console.error('Error:', error))
+            .catch(error => console.error('Errors:', error))
             .then(response => {
                 console.log('Success:', response)
-                if(response!==null){
+                if(response['status']==1){
+                    console.log("Registró")
+                    console.log(response['status'])
+                    //this.setState({errors:response.status})
                     window.location.href='/login'
+                }
+                else{
+                    let errors={};
+                    console.log("Ya existe")
+                    errors.status="Ya existe este correo"
+                    console.log(response['status'])
+                   this.setState({errors:errors})
                 }
 
             }); }
@@ -103,9 +114,10 @@ class Register extends React.Component {
                     <span className="help-block">{this.state.errors.ClaveClienteConfirmation}</span>
                         <input type="password" className="form-control" onChange={this.onChange} name="ClaveClienteConfirmation" placeholder="Confirmar Contraseña" required></input>
                     </div>  
+                    
                     <button type="submit"  className="btn btn-primary" >Registrarse</button>             
                 </form>
-
+                <span className="help-block">{this.state.errors.status}</span>
 				<pre></pre>
 
                 <div className="col-12">

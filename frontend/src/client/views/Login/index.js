@@ -4,6 +4,7 @@ import '../../style/bootstrap.css';
 import foto from '../../img/LogoPetSafe.png'
 import { Link } from 'react-router-dom';
 import validateInput from '../../validations/login';
+import jwt_decode from 'jwt-decode'
 //import {connect} from 'react-redux';
 
 /*
@@ -36,7 +37,7 @@ class Login extends React.Component {
 
             let data = {CorreoCliente: this.state.CorreoCliente, ClaveCliente:this.state.ClaveCliente};
             console.log(data);
-            console.log(JSON.stringify(data))
+           
           
                 fetch(url, {
                 method: 'POST', // or 'PUT'
@@ -44,19 +45,62 @@ class Login extends React.Component {
                 headers:{
                     'Content-Type': 'application/json'
                 }
-                }).then(res => res.json())
-                .catch(error => console.error('Error:', error))
-                .then(response => {
-                    console.log('Success:', response)
-                    if(response!==null){
-                        window.location.href='/'
+                }).then(res => res.json()
+                    /*/aiudaaaa
+                    localStorage.setItem('usertoken', res)
+                    console.log(res)
+                    console.log(localStorage)
+                    const decoded = jwt_decode(localStorage.usertoken)
+                    
+                    
+                    console.log(decoded)*/
+                    
+                ).then(data => {
+                    console.log('Data',data)
+                    let errors={};
+                    
+                    if(data["status"]==1){
+                        errors.Incorrect='Clave incorrecta'
+                        this.setState({errors: errors})
+
+                       
                     }
-                    else{
-                        let errors={};
-                        errors.Incorrect='Data incorrect'
+                    else if(data["status"]==2){
+                        errors.Incorrect='No existe usuario'
                         this.setState({errors: errors})
                     }
+                    else{
+                        
+                        localStorage.setItem('usertoken', JSON.stringify(data))
+                         window.location.href='/'
+                       // const decoded = jwt_decode(localStorage.usertoken)
+                    
+                    
+                   // console.log(decoded)
+                    }
+                
+                
+                
+                
+                }
+                    ).catch(error => console.error('Error:', error))
+                .then(response => {
+                    console.log('Success:', response)
+                    let errors={};
+                    /*
+                    if(response["status"]!==1){
+                        errors.Incorrect='Clave incorrecta'
+                        this.setState({errors: errors})
+
+                       // window.location.href='/'
+                    }
+                    else{
+                        
+                        errors.Incorrect='No existe usuario'
+                        this.setState({errors: errors})
+                    }*/
             }); 
+                
                
                 
 
