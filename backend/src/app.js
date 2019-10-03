@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-
+const socket= require('socket.io');
 const app = express();
 
 // settings
