@@ -12,6 +12,13 @@ class Header extends React.Component {
     };
 
     this.toggleSidenav= this.toggleSidenav.bind(this);
+    this.logOut=this.logOut.bind(this);
+  }
+  logOut(e) {
+    e.preventDefault()
+    localStorage.removeItem('usertoken')
+    window.location.href='/'
+    
   }
 
   toggleSidenav() {
@@ -24,6 +31,26 @@ class Header extends React.Component {
 
     render() 
     {
+      const login=(
+      <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li className="nav-item">
+          <Link to="/login" className="nav-link">Login</Link>                
+        </li>
+        <li className="nav-item">
+          <Link to="/register" className="nav-link">Register</Link>                
+        </li>
+      </ul>
+    )
+    const noLogin=(
+      <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+       
+        <li className="nav-item">
+          <Link to="/register"onClick={this.logOut} className="nav-link">Logout</Link>                
+        </li>
+      </ul>
+      
+    )
+
       return (
         
           
@@ -59,11 +86,9 @@ class Header extends React.Component {
             
               
             </ul>
-            <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-            <li className="nav-item">
-              <Link to="/login" className="nav-link">Login</Link>                
-            </li>
-            </ul>
+
+            {localStorage.usertoken ? noLogin : login}
+            
           </div>
           </div>
       </nav>

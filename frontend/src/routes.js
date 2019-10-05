@@ -9,6 +9,7 @@ import  NoMatch  from './client/views/NoMatch';
 import  Search  from './client/views/Search';
 import  NavBar  from './client/components/header';
 import Footer from './client/components/footer';
+import Chat from './client/components/chat'
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 
@@ -32,6 +33,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         
         
       </Switch>
+      <Chat></Chat>
       <Footer></Footer>
       
     </div>

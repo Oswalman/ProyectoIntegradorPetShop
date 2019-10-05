@@ -10,6 +10,7 @@ const divStyle = {
 
 class footer extends Component {
 
+<<<<<<< HEAD
 render() {
   return (
     <footer className="page-footer text-white bg-dark">
@@ -22,6 +23,41 @@ render() {
             <div className="col-md-6 col-lg-7 text-center text-md-right">
             <a href="https://www.facebook.com/UPB-BUS-766221750396402/" style={style} className="icon-facebook">
               </a>
+=======
+    render() {
+        return (
+        <footer className="page-footer text-white bg-dark ">
+
+            <div className="bg-primary">
+                <div className="container-fluid">
+
+      
+                    <div className="row py-4 d-flex align-items-center">
+
+       
+                            <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                                <h6 className="mb-0">¡Conéctate con nosotros en las redes sociales!</h6>
+                            </div>
+       
+
+        
+                        <div className="col-md-6 col-lg-7 text-center text-md-right">
+                       
+                       <a href="https://www.facebook.com/UPB-BUS-766221750396402/" style={style} className="icon-facebook">
+                          </a>
+                        
+                     
+                        
+            
+                        
+
+                        </div>
+      
+
+                     </div>
+     
+
+>>>>>>> 47a944d21c4d29267f27f3651c671d7c9d69126a
             </div>
           </div>
         </div>
