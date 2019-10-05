@@ -1,0 +1,45 @@
+
+.cont{
+    background: #D7E6E5;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img{
+    margin-top: 20px;
+}
+
+.cnt{
+    background: #D7E6E5;
+}
+
+.cnt:hover{
+    background: rgb(153, 173, 172);
+}
+
+.fotoMP{
+    border-radius: 25%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+h1,h2,h3,h4,h5,h6,.txt-info{
+    color: black;
+    text-align: center;
+}
+
+.btn{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+.contN{
+    background: #D7E6E5;
+}
+hr{
+    width: 80%;
+    border: 1px solid rgb(0,0,0,.5);
+}
