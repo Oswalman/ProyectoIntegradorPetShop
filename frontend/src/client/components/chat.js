@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '.././style/chat.css';
 import openSocket from 'socket.io-client';
 import jwt_decode from 'jwt-decode';
+import Message from './message'
 const socket = openSocket('http://localhost:4000');
 
 export default class chat extends Component {
@@ -9,7 +10,8 @@ export default class chat extends Component {
         super(props);
         this.state = {boolean: true,
             message:'',
-            request:''
+            request:'',
+            item:[]
         
         };
         this.toggleSidenav=this.toggleSidenav.bind(this);
@@ -31,6 +33,10 @@ export default class chat extends Component {
        
         socket.on('chat:message', (data)=>{
             console.log(data);
+            const item=this.state.item
+            const user=data["username"]
+            const message=data["message"]
+            item.push({user,message})
           
             this.setState({request:data})
             
@@ -51,7 +57,19 @@ export default class chat extends Component {
                 <h1 onClick={this.toggleSidenav}>Chat</h1>
                 
                 <div className="container-fluid bg-light" id="chat-window">
-                    <div className="container-fluid" id="output"><p>{this.state.request["username"]}:{this.state.request["message"]}</p></div>
+                    <div className="container-fluid" id="output">
+                        {this.state.item.map((item)=>{
+                            return(
+                                <Message
+                                usuario={item.user}
+                                message={item.message}
+                                ></Message>
+                                
+                            )
+
+                        })}
+                       
+                       </div>
                     <div className="container-fluid" id="actions"></div>
                 </div>
                 

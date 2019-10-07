@@ -12,12 +12,16 @@ export default class floating_button extends React.Component {
                 icon="far fa-sticky-note" />
             <Link href="#"
                 tooltip="Add user link"
-                icon="fas fa-user-plus" />
-                className="fab-item btn btn-link btn-lg text-white"
+                icon="fas fa-user-plus" 
+                className="sticky-top btn btn-link btn-lg text-white"
+                />
+                
             <Button
                 tooltip="The big plus button!"
                 icon="fas fa-plus"
                 rotate={true}
+                position="left-top"
+                className="fixed-top"
                 onClick={() => alert('FAB Rocks!')} />
         </Container>
         )

@@ -9,10 +9,13 @@ class Search extends React.Component
 {
     render(){
         return(
+            <div className="container-fuid">
+                <Floating_Button></Floating_Button> 
             <div className="row contN">
-                <Floating_Button></Floating_Button>    
+                   
                 <div className="col">
                     <div className="cont">
+                    
                         <div className="col-lg-3 col-sm-12 cnt">
                             <div className="img">
                                 <img src={foto} className="fotoMP"></img>        
@@ -31,6 +34,7 @@ class Search extends React.Component
                     </div>
                 </div>
                 
+            </div>
             </div>
         )
     } 
