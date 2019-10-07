@@ -12,17 +12,8 @@ class footer extends Component {
 
 render() {
   return (
-    <footer className="page-footer text-white bg-dark">
-      <div className="bg-primary">
-        <div className="container-fluid">
-          <div className="row py-4 d-flex align-items-center">
-            <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-              <h6 className="mb-0">¡Conéctate con nosotros en las redes sociales!</h6>
-            </div>        
-            <div className="col-md-6 col-lg-7 text-center text-md-right">
-            <a href="https://www.facebook.com/UPB-BUS-766221750396402/" style={style} className="icon-facebook">
-              </a>
-        <footer className="page-footer text-white bg-dark ">
+   
+    <footer className="page-footer text-white bg-dark ">
             <div className="bg-primary">
                 <div className="container-fluid">
                     <div className="row py-4 d-flex align-items-center">
@@ -36,8 +27,8 @@ render() {
                     </div>
             </div>
           </div>
-        </footer>
-      </div>
+       
+     
       <div className="container text-center text-md-left mt-5 ">
         <div className="row mt-3">
           <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -93,9 +84,7 @@ render() {
   <div className="footer-copyright text-center py-3">© 2019 Copyright:
     <a href="/"> PetSafe</a>
   </div>
-  </div>
-  </div>
-  </div>
+  
   </footer>
         )
     }
