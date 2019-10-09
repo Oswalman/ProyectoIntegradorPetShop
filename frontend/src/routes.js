@@ -7,9 +7,10 @@ import  Register  from './client/views/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  NoMatch  from './client/views/NoMatch';
 import  Search  from './client/views/Search';
+import SearchRegister from './client/views/SearchRegister';
 import  NavBar  from './client/components/header';
 import Footer from './client/components/footer';
-import Chat from './client/components/chat'
+import Chat from './client/components/chat';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 
@@ -27,6 +28,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         <Route exact path="/login" component={Login} />
         <Route exact path="/about" component={About} />
         <Route exact path="/search" component={Search} />
+        <Route exact path="/searchRegister" component={SearchRegister}/>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Home} />
         <Route component={NoMatch} />

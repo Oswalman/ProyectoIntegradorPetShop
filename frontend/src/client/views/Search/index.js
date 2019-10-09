@@ -30,7 +30,7 @@ class Search extends React.Component
                     <div>
                         <h4 className="txt-info">¿Has perdido tu mascota?</h4>
                         <h6 className="txt-info">Permitenos ayudarte ha encontrarla</h6>
-                        <button type="button" className="btn btn-info" >Buscar Mascota</button>
+                        <Link to="/searchRegister" className="btn btn-info">Buscar Mascota</Link>
                     </div>
                 </div>
                 
