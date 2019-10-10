@@ -17,7 +17,7 @@ class Register extends React.Component {
      };
    
      this.onChange=this.onChange.bind(this);
-     this.performLogin=this.performLogin.bind(this);
+     this.RegistrarPet=this.RegistrarPet.bind(this);
     }
     RegistrarPet(elem){
         elem.preventDefault()
