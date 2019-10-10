@@ -19,7 +19,7 @@ class Register extends React.Component {
      this.onChange=this.onChange.bind(this);
      this.performLogin=this.performLogin.bind(this);
     }
-    performLogin(elem){
+    RegistrarPet(elem){
         elem.preventDefault()
         var url = 'http://localhost:4000/api/lostPet/';
 
@@ -75,7 +75,7 @@ class Register extends React.Component {
                 <h1 className="h3 mb-3 font-weight-normal inicioS">Registro de Mascota Perdida</h1>
                <pre></pre>
 
-                <form onSubmit={this.performLogin} className="col-12">
+                <form onSubmit={this.RegistrarPet} className="col-12">
 
                     <div className="form-group">
                     <span className="help-block">{this.state.errors.Nom_User}</span>
@@ -84,12 +84,12 @@ class Register extends React.Component {
 
                     <div className="form-group">
                     <span className="help-block">{this.state.errors.Direccion}</span>
-                        <input type="text" className="form-control" onChange={this.onChange} name="Direccion" placeholder="Nombre Completo"></input>
+                        <input type="text" className="form-control" onChange={this.onChange} name="Direccion" placeholder="Direccion"></input>
                     </div>
                     
                     <div className="form-group">
                     <span className="help-block">{this.state.errors.Nom_Pet}</span>
-                        <input type="text" className="form-control" onChange={this.onChange} name="Nom_Pet" placeholder="Nombre Completo"></input>
+                        <input type="text" className="form-control" onChange={this.onChange} name="Nom_Pet" placeholder="Nombre de la mascota"></input>
                     </div>
 
                     <div className="form-group">

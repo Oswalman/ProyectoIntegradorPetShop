@@ -8,7 +8,8 @@ lostPetCtrl.getlostPet = async (req, res) => {
     const lostPet=await lostPet1.find();
     res.json(lostPet);
 };
-
+lostPetCtrl.getlostPet = async (req, res) => {
+    const{Nom_User,Nom_Pet}=req.body;
 lostPet1.findlost({
   Nom_User: Nom_User,
   Nom_Pet: Nom_Pet
@@ -32,9 +33,10 @@ lostPet1.findlost({
       console.log("Error backend Registro de Mascota Perdida")
       console.log(err)
     res.send('error: ' + err)
-  });
+  })
+};
 
-lostCtrl.createlostPet = async (req, res) => {
+lostPetCtrl.createlostPet = async (req, res) => {
     const {Nom_User, Nom_Pet}= req.body;
 
     const lostPetData = {

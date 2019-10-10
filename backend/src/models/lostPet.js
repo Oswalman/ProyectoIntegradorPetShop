@@ -5,7 +5,7 @@ const lostPetSchema=new Schema({
     Direccion: String,
     Nom_Pet: String,
     Description: String,
-    foto_pet: File},
+    foto_pet: String},
     {
     timestamps:true
 }
