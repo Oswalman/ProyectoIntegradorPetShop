@@ -1,14 +1,14 @@
 const { Router } = require('express');
 const router = Router();
 
-const { getLosts, getLost, createLost, deleteLost } = require('../controllers/lostPet.controller');
+const { getlostPetOne, getlostPet, createlostPet, deletelost } = require('../controllers/lostPet.controller');
 
 router.route('/')
-    .get(getLosts)
-    .post(createLost);
+    .get(getlostPet)
+    .post(createlostPet);
 
 router.route('/login')
-    .post(getLost)
-    .delete(deleteLost);
+    .post(getlostPetOne)
+    .delete(deletelost);
 
 module.exports = router;

@@ -8,9 +8,9 @@ lostPetCtrl.getlostPet = async (req, res) => {
     const lostPet=await lostPet1.find();
     res.json(lostPet);
 };
-lostPetCtrl.getlostPet = async (req, res) => {
+lostPetCtrl.getlostPetOne = async (req, res) => {
     const{Nom_User,Nom_Pet}=req.body;
-lostPet1.findlost({
+lostPet1.findOne({
   Nom_User: Nom_User,
   Nom_Pet: Nom_Pet
 })
@@ -47,7 +47,7 @@ lostPetCtrl.createlostPet = async (req, res) => {
         foto_pet: req.body.foto_pet        
       }
 
-    lostPet1.findlost({
+    lostPet1.findOne({
         Nom_User: Nom_User,
         Nom_Pet: Nom_Pet
       }) .then(lostPet => {
