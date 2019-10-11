@@ -3,6 +3,7 @@ import '.././style/chat.css';
 import openSocket from 'socket.io-client';
 import jwt_decode from 'jwt-decode';
 import Message from './message'
+import { Link } from 'react-router-dom';
 const socket = openSocket('http://localhost:4000');
 
 export default class chat extends Component {
@@ -32,14 +33,15 @@ export default class chat extends Component {
      
        
         socket.on('chat:message', (data)=>{
-            console.log(data);
+            
             const item=this.state.item
             const user=data["username"]
             const message=data["message"]
             item.push({user,message})
           
             this.setState({request:data})
-            
+            console.log(this.state.request);
+            console.log(item);
             
         })
     }
@@ -52,29 +54,33 @@ export default class chat extends Component {
     }
 
     render() {
+        const logueado=(<div className="container-fluid bg-light" id="chat-window">
+            <div className="container-fluid" id="output">
+            {this.state.item.map((item)=>{
+                return(
+                    <Message
+                    usuario={item.user}
+                    message={item.message}
+                    ></Message>
+                    
+                )
+
+            })}
+           
+           </div>
+        <div className="container-fluid" id="actions"></div>
+        <input type="text" className="form-control" onChange={e=>this.SendMessage(e)} name="message"  id="message" placeholder="Message"></input>
+        <button className="btn bg-primary" onClick={this.sendSocketIO}    id="send">Send</button>
+        </div>)
+
+    const notLogueado=(<Link to="login">Iniciar sesión</Link>)
         return (
             <div className="container-fluid" id={this.state.boolean? 'chat-container-open':'chat'}  >
                 <h1 onClick={this.toggleSidenav}>Chat</h1>
                 
-                <div className="container-fluid bg-light" id="chat-window">
-                    <div className="container-fluid" id="output">
-                        {this.state.item.map((item)=>{
-                            return(
-                                <Message
-                                usuario={item.user}
-                                message={item.message}
-                                ></Message>
-                                
-                            )
-
-                        })}
-                       
-                       </div>
-                    <div className="container-fluid" id="actions"></div>
-                </div>
+                {localStorage.usertoken?logueado:notLogueado}
                 
-                <input type="text" className="form-control" onChange={e=>this.SendMessage(e)} name="message"  id="message" placeholder="Message"></input>
-                <button className="btn bg-primary" onClick={this.sendSocketIO}    id="send">Send</button>
+                
              
                 <button type="button" className="btn cancel bg-danger" onClick={this.toggleSidenav}>Close</button>
                 
