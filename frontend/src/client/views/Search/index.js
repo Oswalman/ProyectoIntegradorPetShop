@@ -9,6 +9,7 @@ class Search extends React.Component
 {
     render(){
         return(
+
             <div className="container-fuid">
                 <Floating_Button></Floating_Button> 
             <div className="row contN">

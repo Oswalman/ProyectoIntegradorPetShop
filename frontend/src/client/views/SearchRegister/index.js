@@ -19,15 +19,16 @@ class Register extends React.Component {
      this.onChange=this.onChange.bind(this);
      this.RegistrarPet=this.RegistrarPet.bind(this);
     }
+
     RegistrarPet(elem){
         elem.preventDefault()
         var url = 'http://localhost:4000/api/lostPet/';
-
+/*
         let data = {Nom_User: this.state.Nom_User,
                     Direccion: this.state.Direccion,
                     Nom_Pet:this.state.Nom_Pet,
-                    Description: this.state.Description,
-                    foto_pet: this.state.foto_pet}
+                    Description: this.state.Description
+                    }
                     console.log(data);
       
             fetch(url, {
@@ -53,7 +54,22 @@ class Register extends React.Component {
                    this.setState({errors:errors})
                 }
 
-            });
+            });*/
+            const formData = new FormData()
+            var foto_pet;
+            
+            formData.append('foto_pet',this.state.foto_pet)
+            console.log(formData)
+            //let data2={foto_pet: this.state.foto_pet}
+            const options={
+                method: 'POST',
+                body:formData, 
+                headers:{
+                    'Content-Type': 'multipart/form-data'
+                }
+                }
+                //delete options.headers['Content-Type'];
+            fetch(url + 'upload', options).then(res => res.json()).catch(error => console.error('Errors:', error))
 
     }
 
@@ -75,7 +91,7 @@ class Register extends React.Component {
                 <h1 className="h3 mb-3 font-weight-normal inicioS">Registro de Mascota Perdida</h1>
                <pre></pre>
 
-                <form onSubmit={this.RegistrarPet} className="col-12">
+                <form onSubmit={this.RegistrarPet}  className="col-12">
 
                     <div className="form-group">
                     <span className="help-block">{this.state.errors.Nom_User}</span>

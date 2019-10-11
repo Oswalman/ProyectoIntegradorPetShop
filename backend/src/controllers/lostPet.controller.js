@@ -8,6 +8,17 @@ lostPetCtrl.getlostPet = async (req, res) => {
     const lostPet=await lostPet1.find();
     res.json(lostPet);
 };
+lostPetCtrl.uploadLost = async (req, res) => {
+  let sampleFile = req.files.foto_pet;
+  
+  sampleFile.mv('backend/src/img/' + sampleFile.name , function(err) {
+    if (err)
+    console.log(err)
+
+    console.log("imagen subio")
+    res.send('File uploaded!');
+  });
+};
 lostPetCtrl.getlostPetOne = async (req, res) => {
     const{Nom_User,Nom_Pet}=req.body;
 lostPet1.findOne({
@@ -44,7 +55,7 @@ lostPetCtrl.createlostPet = async (req, res) => {
         Direccion: req.body.Direccion,
         Nom_Pet: req.body.Nom_Pet,
         Descripcion: req.body.Descripcion,
-        foto_pet: req.body.foto_pet        
+             
       }
 
     lostPet1.findOne({
