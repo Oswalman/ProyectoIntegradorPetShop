@@ -9,15 +9,33 @@ lostPetCtrl.getlostPet = async (req, res) => {
     res.json(lostPet);
 };
 lostPetCtrl.uploadLost = async (req, res) => {
-  let sampleFile = req.files.foto_pet;
+  const {foto_pet}=req.files;
   
-  sampleFile.mv('backend/src/img/' + sampleFile.name , function(err) {
+ console.log(req.body);
+  foto_pet.mv('src/img/' + foto_pet.name , function(err) {
     if (err)
     console.log(err)
 
     console.log("imagen subio")
     res.send('File uploaded!');
   });
+  const data={ 
+    Nom_User: req.body.Nom_User,
+    Direccion: req.body.Direccion,
+    Nom_Pet: req.body.Nom_Pet,
+    Description: req.body.Description,
+    foto_pet:foto_pet.name
+  }
+  console.log(data)
+
+  lostPet1.create(data).then(lospet => {
+   
+    console.log("Registró")
+  }).catch(err => {
+    console.log("Error al crear")
+  res.send('error: ' + err)
+})
+
 };
 lostPetCtrl.getlostPetOne = async (req, res) => {
     const{Nom_User,Nom_Pet}=req.body;

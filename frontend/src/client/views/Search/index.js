@@ -8,6 +8,12 @@ import Floating_Button from '../../components/floating_button';
 class Search extends React.Component
 {
     render(){
+        const logueado=(<div>
+            <h4 className="txt-info">¿Has perdido tu mascota?</h4>
+            <h6 className="txt-info">Permitenos ayudarte ha encontrarla</h6>
+            <Link to="/searchRegister" className="btn btn-info">Buscar Mascota</Link>
+        </div>)
+        const notLogueado=(<Link to="login">Iniciar sesión</Link>)
         return(
 
             <div className="container-fuid">
@@ -28,11 +34,8 @@ class Search extends React.Component
                           
                     </div>
                     <hr></hr>
-                    <div>
-                        <h4 className="txt-info">¿Has perdido tu mascota?</h4>
-                        <h6 className="txt-info">Permitenos ayudarte ha encontrarla</h6>
-                        <Link to="/searchRegister" className="btn btn-info">Buscar Mascota</Link>
-                    </div>
+                    {localStorage.usertoken ? logueado: notLogueado}
+                    
                 </div>
                 
             </div>

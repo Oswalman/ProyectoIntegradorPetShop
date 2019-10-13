@@ -40,7 +40,9 @@ export default class chat extends Component {
             item.push({user,message})
           
             this.setState({request:data})
+            console.log("data")
             console.log(this.state.request);
+            console.log("item")
             console.log(item);
             
         })

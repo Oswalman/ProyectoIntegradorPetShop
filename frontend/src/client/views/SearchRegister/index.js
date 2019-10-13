@@ -18,63 +18,44 @@ class Register extends React.Component {
    
      this.onChange=this.onChange.bind(this);
      this.RegistrarPet=this.RegistrarPet.bind(this);
+     this.onChangeUpload=this.onChangeUpload.bind(this);
     }
 
     RegistrarPet(elem){
         elem.preventDefault()
         var url = 'http://localhost:4000/api/lostPet/';
-/*
-        let data = {Nom_User: this.state.Nom_User,
-                    Direccion: this.state.Direccion,
-                    Nom_Pet:this.state.Nom_Pet,
-                    Description: this.state.Description
-                    }
-                    console.log(data);
-      
-            fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(data), 
-            headers:{
-                'Content-Type': 'application/json'
-            }
-            }).then(res => res.json())
-            .catch(error => console.error('Errors:', error))
-            .then(response => {
-                console.log('Success:', response)
-                if(response['status'] == 1){
-                    console.log("Registró")
-                    console.log(response['status'])
-                    window.location.href='/home'
-                }
-                else{
-                    let errors={};
-                    console.log("Algo Salio mal")
-                    errors.status="Upss!!! Algo salio mal"
-                    console.log(response['status'])
-                   this.setState({errors:errors})
-                }
 
-            });*/
             const formData = new FormData()
-            var foto_pet;
+           
             
-            formData.append('foto_pet',this.state.foto_pet)
+            formData.append('foto_pet',this.state.foto_pet, this.state.foto_pet.name)
+            formData.append("Nom_User",this.state.Nom_User)
+            formData.append("Direccion", this.state.Direccion)
+            formData.append("Nom_Pet", this.state.Nom_Pet)
+            formData.append("Description", this.state.Description)
+            console.log(this.state.foto_pet)
             console.log(formData)
-            //let data2={foto_pet: this.state.foto_pet}
+      
             const options={
                 method: 'POST',
                 body:formData, 
-                headers:{
-                    'Content-Type': 'multipart/form-data'
+               
                 }
-                }
-                //delete options.headers['Content-Type'];
-            fetch(url + 'upload', options).then(res => res.json()).catch(error => console.error('Errors:', error))
+        
+            fetch(url + 'upload', options).then(res => 
+                {
+                    console.log(res)
+                    window.location.href='/search'
+                
+            }).catch(error => console.error('Errors:', error))
 
     }
 
     onChange(elem) {
         this.setState({[elem.target.name] : elem.target.value})
+    }
+    onChangeUpload(elem){
+        this.setState({foto_pet: elem.target.files[0]})
     }
   
     
@@ -116,7 +97,7 @@ class Register extends React.Component {
                     <div className="form-group">
                     <span className="help-block">{this.state.errors.foto_pet}</span>
                         <h6>Foto de la mascota</h6>
-                        <input type="file" onChange={this.onChange} name="foto_pet"></input>
+                        <input type="file"  onChange={ this.onChangeUpload} name="foto_pet"></input>
                     </div>
 
                     <button type="submit"  className="btn btn-primary" >Registrar Perdida</button>             
