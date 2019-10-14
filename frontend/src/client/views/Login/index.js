@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../style/login.css';
 import '../../style/bootstrap.css';
-import foto from '../../img/LogoPetSafe.png'
+import foto from '../../img/LogoPetLocker.png'
 import { Link } from 'react-router-dom';
 import validateInput from '../../validations/login';
 import jwt_decode from 'jwt-decode'

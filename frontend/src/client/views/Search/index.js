@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../style/mascotasP.css';
 import '../../style/bootstrap.css';
-import foto from "../../img/perdido1.png";
+
 import { Link } from 'react-router-dom';
 import Floating_Button from '../../components/floating_button';
 

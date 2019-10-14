@@ -75,9 +75,9 @@ export default class chat extends Component {
         <button className="btn bg-primary" onClick={this.sendSocketIO}    id="send">Send</button>
         </div>)
 
-    const notLogueado=(<Link to="login">Iniciar sesión</Link>)
+    const notLogueado=(<center><Link to="login">Iniciar sesión</Link></center>)
         return (
-            <div className="container-fluid" id={this.state.boolean? 'chat-container-open':'chat'}  >
+            <div className="container-fluid"  id={this.state.boolean? 'chat-container-open':'chat'}  >
                 <h1 onClick={this.toggleSidenav}>Chat</h1>
                 
                 {localStorage.usertoken?logueado:notLogueado}
