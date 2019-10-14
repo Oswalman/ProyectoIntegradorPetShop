@@ -20,7 +20,13 @@ class Search extends Component
             <h6 className="txt-info">Permitenos ayudarte ha encontrarla</h6>
             <Link to="searchRegister" className="btn btn-info">Buscar Mascota</Link>
         </div>)
-        const notLogueado=(<Link to="login">Iniciar sesión</Link>)
+        const notLogueado=(
+        <div style={{textAlign: "center"}} className="container">
+            <h4 className="txt-info">¿Has perdido tu mascota?</h4>
+            <h6 className="txt-info">Permitenos ayudarte ha encontrarla</h6>
+            <Link to="login" className="btn btn-info">Iniciar sesión</Link>
+        </div>
+        )
 
         fetch('http://localhost:4000/api/lostPet/', { method : 'GET'})
         .then(response => response.json())
@@ -29,10 +35,10 @@ class Search extends Component
         })
         return(
 
-            <div className="container-fuid">
+            <div className="container-build">
                 <Floating_Button></Floating_Button> 
-                <div className="row contN">
-                    <div className="col">
+                <div className="row contN" style={{marginLeft:"0px", marginRight:"0px"}}>
+                    <div className="col container">
                         <Busqueda
                         package = {this.state.package}/>
                         {localStorage.usertoken ? logueado: notLogueado}
