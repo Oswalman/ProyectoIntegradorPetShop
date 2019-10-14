@@ -12,7 +12,7 @@ lostPetCtrl.uploadLost = async (req, res) => {
   const {foto_pet}=req.files;
   
  console.log(req.body);
-  foto_pet.mv('src/img/' + foto_pet.name , function(err) {
+  foto_pet.mv('../frontend/src/client/img/' + foto_pet.name , function(err) {
     if (err)
     console.log(err)
 

@@ -5,6 +5,7 @@ import foto3 from '../img/3.png';
 
 
 
+
 class Slider extends React.Component
 {
     render(){
@@ -14,6 +15,7 @@ class Slider extends React.Component
         <img src={foto1} alt=""/>
         <img src={foto2} alt="" title="#htmlcaption"/>
         <img src={foto3} alt="" title="Hellou"/>
+      
       </div>
       <div>
           <div id="htmlcaption" className="nivo-html-caption">

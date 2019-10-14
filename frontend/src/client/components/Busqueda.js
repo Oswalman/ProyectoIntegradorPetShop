@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import Imagen from '../components/RenderIMG'
 
 class Busqueda extends Component{
+    constructor(props) {
+        super(props);
+        this.renderPackage=this.renderPackage.bind(this);
+    }
 
     
     renderPackage = () => {
@@ -16,7 +20,7 @@ class Busqueda extends Component{
                 <div style={{display: "flex"}}>
                     {packageA.map(imagen => (
                         <Imagen
-                        key={Imagen.id}
+                        key={imagen._id}
                         imagen={imagen}/>
                     ))}
                 </div> 
