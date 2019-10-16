@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../../style/mascotasP.css';
 import '../../style/bootstrap.css';
+import Mapa from '../../components/map';
 
 import { Link } from 'react-router-dom';
 import Floating_Button from '../../components/floating_button';
@@ -41,9 +42,11 @@ class Search extends Component
                     <div className="col container">
                         <Busqueda
                         package = {this.state.package}/>
+                        
                         {localStorage.usertoken ? logueado: notLogueado}
                     </div>
                 </div>
+                
             </div>
         )
     } 

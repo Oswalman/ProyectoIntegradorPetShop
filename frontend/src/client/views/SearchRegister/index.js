@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import '../../style/login.css';
 import foto from '../../img/LogoPetSafe.png'
 import { Link } from 'react-router-dom';
-
+import Mapa from '../../components/map';
 
 class Register extends React.Component {
     constructor(props) {
@@ -109,6 +109,7 @@ class Register extends React.Component {
                 <pre></pre>       
             </div>
         </div>
+        <Mapa/>
     </div>
 
 );}
