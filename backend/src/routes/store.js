@@ -1,15 +1,15 @@
 const { Router } = require('express');
 const router = Router();
 
-const { getStore, getAllStore, createStore, deleteStore, uploadStore } = require('../controllers/store.controller');
+const { getStore, getAllStore, createStore, deleteStore } = require('../controllers/store.controller');
 
 router.route('/')
     .get(getAllStore)
     .post(createStore)
 
-router.route('/create')
+router.route('/search')
     .post(getStore)
-    .delete(deleteUser)
+    .delete(deleteStore)
 
 
 module.exports = router;

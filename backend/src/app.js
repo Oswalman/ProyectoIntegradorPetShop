@@ -18,5 +18,6 @@ app.use(express.urlencoded({extended:false}))
 app.use('/api/notes', require('./routes/notes'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/lostPet', require('./routes/lostPet'));
+app.use('/api/store', require('./routes/store'));
 
 module.exports = app;

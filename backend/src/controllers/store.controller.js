@@ -8,6 +8,14 @@ StoreCtrl.getAllStore = async (req, res) => {
     const store=await Store.find();
     res.json(store);
 };
+StoreCtrl.deleteStore = async (req, res) => {
+    const store=await Store.find();
+    res.json(store);
+};
+StoreCtrl.getStore = async (req, res) => {
+    const store=await Store.find();
+    res.json(store);
+};
 
 StoreCtrl.createStore = async (req, res) => {
     const {img}=req.files;
@@ -36,3 +44,5 @@ StoreCtrl.createStore = async (req, res) => {
     console.log("Error al crear")
   res.send('error: ' + err)
 })}
+
+module.exports = StoreCtrl;
