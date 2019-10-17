@@ -3,6 +3,9 @@ import { render } from 'react-dom';
 import '.././style/style.css';
 import '.././style/icons/styles.css';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components'
+import {ButtonContainer} from "./button";
+
 
 class Header extends React.Component {
   constructor(props) {
@@ -43,17 +46,12 @@ class Header extends React.Component {
     )
     const noLogin=(
       <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-       
         <li className="nav-item">
           <Link to="/register"onClick={this.logOut} className="nav-link">Logout</Link>                
         </li>
       </ul>
-      
     )
-
-      return (
-        
-          
+      return ( 
         <nav className="navbar navbar-expand-lg navbar-light bg-info">
           <div className="container-fluid">
           <Link to="/home" className="navbar-brand">PetLocker</Link>
@@ -83,23 +81,23 @@ class Header extends React.Component {
               <Link to="/about" className="nav-link">Acerca de </Link>
             
               </li>
-            
-              
             </ul>
-
+            <Link to='/cart' className="ml-auto">
+              <ButtonContainer>
+                <span className="mr-2">
+                  <i className="fas fa-cart-plus"></i>
+                </span>
+                my cart
+              </ButtonContainer>
+            </Link>
             {localStorage.usertoken ? noLogin : login}
-            
           </div>
           </div>
       </nav>
-
-         
-
-        
-  
-
       );
     }
   }
+
+  
 
   export default Header;

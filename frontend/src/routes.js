@@ -15,11 +15,11 @@ import Tienda from './client/views/Tienda'
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 
+
  const Routes = () => {
   return (
     <div >
       <NavBar></NavBar>
-
       <Switch>
         <Route exact path="/home" component={Home} />
         <Route exact path="/">
