@@ -37,7 +37,6 @@ class Search extends Component
         return(
 
             <div className="container-build">
-                <Floating_Button></Floating_Button> 
                 <div className="row contN" style={{marginLeft:"0px", marginRight:"0px"}}>
                     <div className="col container">
                         <Busqueda
