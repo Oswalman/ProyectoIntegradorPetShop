@@ -13,15 +13,16 @@ import SearchRegister from './client/views/SearchRegister';
 import  NavBar  from './client/components/header';
 import Footer from './client/components/footer';
 import Chat from './client/components/chat';
-import Tienda from './client/views/Tienda'
+import Tienda from './client/views/Tienda';
+import Detalles from './client/components/details';
 import { Route, Switch, Redirect } from 'react-router-dom';
+
 
 
  const Routes = () => {
   return (
     <div >
       <NavBar></NavBar>
-
       <Switch>
         <Route exact path="/home" component={Home} />
         <Route exact path="/">
@@ -35,6 +36,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         <Route exact path="/manager" component={Manager} />
         <Route exact path="/searchRegister" component={SearchRegister}/>
         <Route exact path="/shop" component={Tienda}/>
+        <Route exact path="/details" component={Detalles}/>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Home} />
         <Route component={NoMatch} />

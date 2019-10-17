@@ -1,10 +1,12 @@
 import React from 'react';
+import ProductsList from '../../components/ProductList'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 class Tienda extends React.Component {
+    
     render(){
         return(
-            <React.Fragment>
-                <h1 style={{textAlign:"center"}}>Proximamente... Por Fabian y Andres</h1>
-            </React.Fragment>
+            <ProductsList></ProductsList>
         )
     }
 }
