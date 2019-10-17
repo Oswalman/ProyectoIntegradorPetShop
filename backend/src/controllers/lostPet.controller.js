@@ -40,21 +40,14 @@ lostPetCtrl.uploadLost = async (req, res) => {
 
 };
 lostPetCtrl.getlostPetOne = async (req, res) => {
-    const{Nom_User,Nom_Pet}=req.body;
+    const{CorreoCliente}=req.body;
 lostPet1.findOne({
-  Nom_User: Nom_User,
-  Nom_Pet: Nom_Pet
+  CorreoCliente: CorreoCliente,
 })
   .then(lostPet => {
     if (lostPet) {
-      if (Nom_User == lostPet.Nom_User && Nom_Pet == lostPet.Nom_Pet) {
-        res.send({status})
-        console.log(status)
-        console.log("Mascota ya Registrada")
-      } else {
-        console.log("Mascota o Usuario no encontrados")
-        res.json({ status: 1 })
-      }
+      res.json(lostPet)
+      
     } else {
       console.log("No existe")
       res.json({ status: 2 })

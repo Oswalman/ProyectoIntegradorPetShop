@@ -32,7 +32,7 @@ render() {
       <div className="container text-center text-md-left mt-5 ">
         <div className="row mt-3">
           <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h6 className="text-uppercase font-weight-bold">PetSafe</h6>
+          <h6 className="text-uppercase font-weight-bold">PetLocker</h6>
           <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={divStyle}/> 
           <p>Unete a esta gran comunidad que busca ayudar a las mascotas.</p>
         </div>

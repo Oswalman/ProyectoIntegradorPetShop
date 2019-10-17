@@ -16,6 +16,7 @@ class Search extends Component
     }
 
     render(){
+        
         const logueado=(<div>
             <h4 className="txt-info">¿Has perdido tu mascota?</h4>
             <h6 className="txt-info">Permitenos ayudarte ha encontrarla</h6>

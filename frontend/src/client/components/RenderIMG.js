@@ -15,7 +15,7 @@ const Imagen = (props) => {
 
                 <input type="checkbox" id="cerrar"></input>
                 <label for="cerrar" id="btn-cerrar">X</label>
-                <div class="modal">
+                <div className="container-fluid" id="modal">
                     <div className="img">
                         <h2>Se Busca</h2>
                         <img src={images('./'+props.imagen.foto_pet)} className="fotoMP"></img>        

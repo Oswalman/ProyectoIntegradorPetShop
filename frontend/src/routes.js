@@ -7,6 +7,8 @@ import  Register  from './client/views/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  NoMatch  from './client/views/NoMatch';
 import  Search  from './client/views/Search';
+import  Manager  from './client/views/Manager';
+import  Adopt from './client/views/adopt';
 import SearchRegister from './client/views/SearchRegister';
 import  NavBar  from './client/components/header';
 import Footer from './client/components/footer';
@@ -29,6 +31,8 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         <Route exact path="/login" component={Login} />
         <Route exact path="/about" component={About} />
         <Route exact path="/search" component={Search} />
+        <Route exact path="/adopt" component={Adopt} />
+        <Route exact path="/manager" component={Manager} />
         <Route exact path="/searchRegister" component={SearchRegister}/>
         <Route exact path="/shop" component={Tienda}/>
         <Route exact path="/register" component={Register} />

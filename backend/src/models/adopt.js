@@ -1,14 +1,13 @@
 const {Schema, model}= require('mongoose');
 
-const lostPetSchema=new Schema({
+const AdoptPetSchema=new Schema({
     CorreoCliente: String,
     Nom_User: String,
     Direccion: String,
-    Nom_Pet: String,
+    Nom_pet:String,
+    Telefono: String,
     Description: String,
     foto_pet: String,
-    Lat: String,
-    Lng: String
 },
     {
     timestamps:true
@@ -16,4 +15,4 @@ const lostPetSchema=new Schema({
     
 )
 
-module.exports=model('lostPet',lostPetSchema);
+module.exports=model('adoptPet',AdoptPetSchema);

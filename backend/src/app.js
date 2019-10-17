@@ -19,5 +19,6 @@ app.use('/api/notes', require('./routes/notes'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/lostPet', require('./routes/lostPet'));
 app.use('/api/store', require('./routes/store'));
+app.use('/api/adopt', require('./routes/adopt'));
 
 module.exports = app;

@@ -12,6 +12,7 @@
     bottom: -100px;
     right: 28px;
     width: 280px;
+    pointer-events: auto;
    
 }
 
@@ -39,6 +40,7 @@
     bottom: 0px;
     right: 28px;
     width: 280px;
+    pointer-events: auto;
 }
 
 

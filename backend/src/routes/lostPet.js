@@ -6,7 +6,7 @@ const { getlostPetOne, getlostPet, createlostPet, deletelost,uploadLost } = requ
 router.route('/')
     .get(getlostPet)
 
-router.route('/login')
+router.route('/search')
     .post(getlostPetOne)
     .delete(deletelost);
 

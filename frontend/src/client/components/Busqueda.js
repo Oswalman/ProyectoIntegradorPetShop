@@ -12,7 +12,7 @@ class Busqueda extends Component{
         const packageA = this.props.package;
         if(packageA.length === 0) return (
             <React.Fragment>
-                <p>NO HAY MASCOTAS EN BUSQUEDA</p>
+                <p>NO HAY MASCOTAS</p>
             </React.Fragment>
         );
         return(
