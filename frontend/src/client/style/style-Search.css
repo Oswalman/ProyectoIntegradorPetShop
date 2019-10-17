@@ -1,12 +1,14 @@
 .modal{
-    width: 100%;
-    height: 100vh;
-    background: rgba(0,0,0,0,0.8);
-
+    
+    
+    background: rgba(0,0,0,0.8);
+    height: 400px;
     position: absolute;
     top:0;
-    left: 0;
-
+    left: 200px;
+    
+    width: 1090px;
+    justify-content:center;
     display: flex;
 
     animation: modal 1s 3s forwards;
