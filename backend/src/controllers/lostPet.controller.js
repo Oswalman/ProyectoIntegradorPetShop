@@ -24,7 +24,9 @@ lostPetCtrl.uploadLost = async (req, res) => {
     Direccion: req.body.Direccion,
     Nom_Pet: req.body.Nom_Pet,
     Description: req.body.Description,
-    foto_pet:foto_pet.name
+    foto_pet:foto_pet.name,
+    Lat:req.body.Lat,
+    Lng:req.body.Lng
   }
   console.log(data)
 

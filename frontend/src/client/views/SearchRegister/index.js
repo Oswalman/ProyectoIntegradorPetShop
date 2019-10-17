@@ -13,26 +13,35 @@ class Register extends React.Component {
         Nom_Pet: '',
         Description:'',
         foto_pet: null,
-        errors:''
+        errors:'',
+        lat:'',
+        lng:''
      };
    
      this.onChange=this.onChange.bind(this);
      this.RegistrarPet=this.RegistrarPet.bind(this);
      this.onChangeUpload=this.onChangeUpload.bind(this);
+     this.pass=this.pass.bind(this);
     }
 
+    pass(_state){
+        console.log(_state)
+        this.setState({lat:_state.lact, lng:_state.lng})
+    }
     RegistrarPet(elem){
         elem.preventDefault()
         var url = 'http://localhost:4000/api/lostPet/';
 
             const formData = new FormData()
            
-            
+           
             formData.append('foto_pet',this.state.foto_pet, this.state.foto_pet.name)
             formData.append("Nom_User",this.state.Nom_User)
             formData.append("Direccion", this.state.Direccion)
             formData.append("Nom_Pet", this.state.Nom_Pet)
             formData.append("Description", this.state.Description)
+            formData.append("Lat",this.state.lat)
+            formData.append("Lng",this.state.lng)
             console.log(this.state.foto_pet)
             console.log(formData)
       
@@ -109,7 +118,7 @@ class Register extends React.Component {
                 <pre></pre>       
             </div>
         </div>
-        <Mapa/>
+        <Mapa pass={this.pass}/>
     </div>
 
 );}
