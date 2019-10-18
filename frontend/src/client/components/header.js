@@ -5,7 +5,7 @@ import '.././style/icons/styles.css';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import {ButtonContainer} from "./button";
-
+import jwt_decode from 'jwt-decode'
 
 class Header extends React.Component {
   constructor(props) {
@@ -33,9 +33,13 @@ class Header extends React.Component {
 }
 
     render() 
-    {
+    { var decoded=""
+      if(localStorage.usertoken){
+         decoded = jwt_decode(localStorage.usertoken)}
       const login=(
+        
       <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+         
         <li className="nav-item">
           <Link to="/login" className="nav-link">Login</Link>                
         </li>
@@ -46,9 +50,22 @@ class Header extends React.Component {
     )
     const noLogin=(
       <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Perfil
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <Link to="/manager"  className="dropdown-item">Gestion</Link>  
+          <Link to="/" onClick={this.logOut} className="dropdown-item">Cerrar sesión</Link> 
+          </div>
+       </li>
         <li className="nav-item">
-          <Link to="/register"onClick={this.logOut} className="nav-link">Logout</Link>                
+         <h5><span class="badge badge-danger">
+           Bienvenido, {decoded.NombreCliente}
+          </span>  </h5>             
         </li>
+        
+    
       </ul>
     )
       return ( 
@@ -90,6 +107,7 @@ class Header extends React.Component {
                 my cart
               </ButtonContainer>
             </Link>
+            
             {localStorage.usertoken ? noLogin : login}
           </div>
           </div>
