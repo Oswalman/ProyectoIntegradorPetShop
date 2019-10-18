@@ -1,18 +1,31 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import Title from "../title";
 import CartColumns from "./CartColumns";
 import EmptyCart from "./EmptyCart";
-import {ProductConsumer} from "../../../context";
+import { ProductConsumer } from "../../../context";
+import CartList from "./CartList";
 
 export default class cart extends Component {
-    render() {
-        return (
-            <section>
-            
-                <Title name="El" title="Carrito"/>
-                <CartColumns />
-                <EmptyCart />
-            </section>
-        );
-    }
+  render() {
+    return (
+      <section>
+        <ProductConsumer>
+          {value => {
+            const { cart } = value;
+            if (cart.length > 0) {
+              return (
+                <React.Fragment>
+                  <Title name="Your" title="cart" />
+                  <CartColumns />
+                  <CartList value={value} />
+                </React.Fragment>
+              );
+            } else {
+              return <EmptyCart />;
+            }
+          }}
+        </ProductConsumer>
+      </section>
+    );
+  }
 }
