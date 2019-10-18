@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 var images = require.context('../img', true);
 const Imagen = (props) => {
-    localStorage.setItem('lostPet', props.imagen._id);
+    localStorage.setItem('lostPet', JSON.stringify(props.imagen));
+   
     return(
         <div className="col-lg-3 col-sm-12 cnt">
             <div className="img">
