@@ -17,7 +17,7 @@ import Tienda from './client/views/Tienda';
 import Detalles from './client/components/details';
 import Modal from './client/components/Modal';
 import Cart from './client/components/Cart/cart';
-import DetallesPet from './client/views/detailsMP'
+import DetallesPet from './client/views/detailsMP';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 
