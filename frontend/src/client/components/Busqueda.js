@@ -9,7 +9,9 @@ class Busqueda extends Component{
 
     
     renderPackage = () => {
+        
         const packageA = this.props.package;
+        console.log(packageA)
         if(packageA.length === 0) return (
             <React.Fragment>
                 <p>NO HAY MASCOTAS</p>

@@ -41,7 +41,8 @@ lostPetCtrl.uploadLost = async (req, res) => {
 };
 lostPetCtrl.getlostPetOne = async (req, res) => {
     const{CorreoCliente}=req.body;
-lostPet1.findOne({
+    console.log(CorreoCliente)
+lostPet1.find({
   CorreoCliente: CorreoCliente,
 })
   .then(lostPet => {

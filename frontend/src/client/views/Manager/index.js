@@ -8,13 +8,18 @@ export default class index extends Component {
     }
     render() {
         const decoded = jwt_decode(localStorage.usertoken)
-        fetch('http://localhost:4000/api/lostPet/search', { method : 'POST',body: JSON.stringify(decoded.CorreoCliente)})
+        console.log(decoded.CorreoCliente)
+        const data={CorreoCliente: decoded.CorreoCliente }
+        fetch('http://localhost:4000/api/lostPet/search', { method : 'POST',body: JSON.stringify(data),headers:{
+            'Content-Type': 'application/json'
+        } })
         .then(response => response.json())
         .then( data  =>{
             this.setState({package : data})            
         })
 
-
+        const info=this.state.package;
+        console.log(info)
         return (
             <div className="container-fluid">
                 <div class="jumbotron">
@@ -34,7 +39,8 @@ export default class index extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                {this.state.package.map(lost => (
+                {info.map(lost => (
+                    
                         <Table
                         key={lost._id}
                         id={lost._id}
