@@ -40,6 +40,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         <Route exact path="/register" component={Register} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/login" component={Home} />
+        <Route exact path="/DetailsPet" component={DetallesPet} />
         <Route component={NoMatch} />
       </Switch>
       <Modal></Modal>
