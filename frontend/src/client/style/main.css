@@ -1,5 +1,5 @@
 .main-header{
-    background: url(../img/bg.webp);
+    background: url(../img/img2/bg.webp);
     background-size: cover; 
     top: 0;
     left: 0;
@@ -11,6 +11,6 @@
     background: rgba(34, 166, 179,0.5);
 }
 .team{
-    background: url(../img/bg2.png);
+    background: url(../img/img2/bg2.png);
     background-size: cover;
 }

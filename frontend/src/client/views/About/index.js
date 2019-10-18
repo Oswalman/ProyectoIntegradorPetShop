@@ -1,9 +1,15 @@
 import React from 'react';
 import '../../style/perfiles.css';
-import foto1 from '../../img/je.png';
-import foto2 from '../../img/oa.png';
-import foto3 from '../../img/fa.png';
-import foto4 from '../../img/af.png';
+import '../../style/main.css';
+import foto1 from '../../img/img2/ByGjhon.jpg';
+import foto2 from '../../img/img2/ByGangarita.jpg';
+import foto3 from '../../img/img2/ByGFabs.jpg';
+import foto4 from '../../img/img2/ByGandres.jpg';
+import foto5 from '../../img/img2/about.webp';
+import foto6 from '../../img/img2/vision.jpg';
+import foto7 from '../../img/img2/lost dog.jpg';
+import foto8 from '../../img/img2/AdoptMe.webp';
+import foto9 from '../../img/img2/shop.jpg';
 
 
 
@@ -28,7 +34,7 @@ class About extends React.Component
                         </p>   
                     </div>
                     <div className="col-sm-6">   
-                      <img src="img/about.webp" alt="Foto baby" class="img-fluid"/>
+                      <img src={foto5} alt="Foto baby" class="img-fluid"/>
                     </div>
                   </div>
                 </div>
@@ -49,7 +55,7 @@ class About extends React.Component
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                       <div class="card-body">
                         Promover un cuidado especial para nuestras mascotas, siendo intermediario en el proceso de búsqueda de estas y del mejor hogar posible para ellas.
-                        <img src="img/mision.jpg" alt="Foto baby" class="img-fluid p-5"/>
+                        <img src={foto6} alt="Foto baby" class="img-fluid p-5"/>
                       </div>
                     </div>
                   </div>
@@ -64,7 +70,7 @@ class About extends React.Component
                     <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                       <div className="card-body">
                         Nos vemos en 5 años como la pagina principal para la comunicación a todo lo referente a mascotas en Bucaramanga, teniendo convenios con las empresas mas importantes de la región.                                
-                        <img src="img/vision.jpg" alt="Foto baby" class="img-fluid p-5"/>
+                        <img src={foto6} alt="Foto baby" class="img-fluid p-5"/>
                       </div>
                     </div>
                   </div>
@@ -80,11 +86,11 @@ class About extends React.Component
                       <div className="card-body">
                         Estamos dedicados al cuidado de las mascotas, tenemos una vocación gigante para esto y ofrecemos distintos servicios que puede ayudarlo a solucionar alguna necesidad establecida:
                          -	Publica tu mascota perdida o ayudanos a encontrarlos
-                        <img src="img/lost dog.jpg" alt="Foto baby" class="img-fluid p-5"/>
+                        <img src={foto7} alt="Foto baby" class="img-fluid p-5"/>
                          -	Dale un hogar feliz a alguna mascota necesitada
-                        <img src="img/AdoptMe.webp" alt="Foto baby" class="img-fluid p-5"/>
+                        <img src={foto8} alt="Foto baby" class="img-fluid p-5"/>
                          -	Tienda de alimentos y accesorios que le alegraran los dias
-                        <img src="img/shop.jpg" alt="Foto baby" class="img-fluid p-5"/>
+                        <img src={foto9} alt="Foto baby" class="img-fluid p-5"/>
                       </div>
                     </div>
                   </div>
@@ -92,36 +98,182 @@ class About extends React.Component
               </div>
             </section> 
 
-            <div className="row containerP">
-              <div className="col-lg-3 pf">
-                <div className="img">
-                  <img src={foto1} className="img-P"></img>
+            <section class="team text-center ">
+             <div class="background-overlay p-5 ">
+                <h1 class="text-white">CONOCE A NUESTRO EQUIPO</h1>
+                <p class="text-white">Somos estudiantes de la Universidad Pontificia Bolivariana de la carrera Ingeniería de Sistemas e Informática</p>
+                <div class="row">
+                  
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card body p-2" >
+                                <center>
+                                <img src={foto2} class="img-fluid rounded-circle w-50 c" alt="Angarita"/>
+                                </center>
+                                <h3>
+                                    Oswaldo Andres Angarita Leon
+                                </h3>
+                                <p>Desarrollador Backend y Frontend!</p>
+                                <div class="row justify-content-center" >
+                                    <div class="col-lg-3">
+                                            <div class="d-flex flex-row justify-content-center">
+                                            <a href="https://www.facebook.com/oswaldoandres01" target="_blank">
+                                                    <i class="fab fa-facebook-square s-5px"></i>
+                                            </a>
+                                            
+                                            </div>
+                                        
+                                    </div>
+                                    <div class="col-lg-3">
+                                            <div class="d-flex flex-row justify-content-center">
+                                                    <a href="https://www.instagram.com/oswalman1/" target="_blank">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </a>
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                            <div class="d-flex flex-row justify-content-center">
+                                                    <a href="https://www.instagram.com/oswalman1/" target="_blank">
+                                                        <i class="fab fa-github-alt"></i>
+                                                    </a>
+                                            </div>
+                                    </div>
+                                        
+                                
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card body p-2" >
+                                    <center>
+                                    <img src={foto4} class="img-fluid rounded-circle w-50 c" alt="Angarita"/>
+                                    </center>
+                                    <h3>
+                                        Andres Felipe Herrera Jerez
+                                    </h3>
+                                    <p>Testing</p>
+                                    <div class="row justify-content-center" >
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                    <a href="https://www.facebook.com/andresherrera028" target="_blank">
+                                                            <i class="fab fa-facebook-square s-5px"></i>
+                                                    </a>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                            <a href="https://www.instagram.com/afhj20/" target="_blank">
+                                                                <i class="fab fa-instagram"></i>
+                                                            </a>
+                                                    </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                            <a href="https://github.com/Andresxv" target="_blank">
+                                                                <i class="fab fa-github-alt"></i>
+                                                            </a>
+                                                    </div>
+                                            </div>
+                                                
+                                        
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+              
+                    <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card body p-2" >
+                                    <center>
+                                    <img src={foto3} class="img-fluid rounded-circle w-50 c" alt="Angarita"/>
+                                    </center>
+                                    <h3>
+                                        Fabian Andres Barreto Rodriguez   
+                                    </h3>
+                                    <p>Desarrollador Frontend</p>
+                                    <div class="row justify-content-center" >
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                    <a href="https://www.facebook.com/fabiancho2198" target="_blank">
+                                                            <i class="fab fa-facebook-square s-5px"></i>
+                                                    </a>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                            <a href="https://www.instagram.com/elfabss/" target="_blank">
+                                                                <i class="fab fa-instagram"></i>
+                                                            </a>
+                                                    </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                            <a href="https://github.com/Andresxv" target="_blank">
+                                                                <i class="fab fa-github-alt"></i>
+                                                            </a>
+                                                    </div>
+                                            </div>
+                                                
+                                        
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+               
+                    <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card body p-2" >
+                                    <center>
+                                    <img src={foto1} class="img-fluid rounded-circle w-50 c" alt="Angarita"/>
+                                    </center>
+                                    <h3>
+                                        Jhon Edinson Castañeda Oviedo   
+                                    </h3>
+                                    <p>Desarrollador Frontend</p>
+                                    <div class="row justify-content-center" >
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                    <a href="https://www.facebook.com/vamos.SrPlayer.GG" target="_blank">
+                                                            <i class="fab fa-facebook-square s-5px"></i>
+                                                    </a>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                            <a href="https://www.instagram.com/shongo_edinson/" target="_blank">
+                                                                <i class="fab fa-instagram"></i>
+                                                            </a>
+                                                    </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                    <div class="d-flex flex-row justify-content-center">
+                                                            <a href="https://github.com/Andresxv" target="_blank">
+                                                                <i class="fab fa-github-alt"></i>
+                                                            </a>
+                                                    </div>
+                                            </div>
+                                                
+                                        
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
                 </div>
-                <h3>Jhon Edinson</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus officia aliquam iure vitae et. Animi nisi illo iste numquam repellendus!</p>
-              </div>
-              <div className="col-lg-3 pf">
-                <div className="img">
-                  <img src={foto2} className="img-P" ></img>
-                </div>
-                <h3>Oswaldo Andres</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus officia aliquam iure vitae et. Animi nisi illo iste numquam repellendus!</p>
-              </div>
-              <div className="col-lg-3 pf">
-                <div className="img">
-                  <img src={foto3} className="img-P"></img>
-                </div>
-                <h3>Fabian Andres</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus officia aliquam iure vitae et. Animi nisi illo iste numquam repellendus!</p>
-              </div>
-              <div className="col-lg-3 pf">
-                <div className="img">
-                  <img src={foto4} className="img-P"></img>
-                </div>
-                <h3>Andres Felipe</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus officia aliquam iure vitae et. Animi nisi illo iste numquam repellendus!</p>
-              </div>  
-            </div>                                  
+             </div>
+         </section>              
           </div>
           
         )
