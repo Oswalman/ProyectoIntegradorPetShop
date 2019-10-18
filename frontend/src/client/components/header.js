@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import '.././style/style.css';
 import '.././style/icons/styles.css';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import {ButtonContainer} from "./button";
 
 
