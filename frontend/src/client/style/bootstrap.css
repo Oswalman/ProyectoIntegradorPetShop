@@ -10034,5 +10034,22 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+  .btn-black{
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 0.8rem !important;
+    color: var(--dark);
+    border-radius: 0 !important;
+    border:0.1rem solid var(--dark)!important;
+  }
+  .btn-black:hover{
+    background: var(--dark)!important;
+    color: var(--light) !important;
+  }
+  .cart-icon{
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--yellow)
+  }
 }
 /*# sourceMappingURL=bootstrap.css.map */

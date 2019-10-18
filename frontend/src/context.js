@@ -6,7 +6,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: [],
+    cart: storeProducts,
     modalOpen: false,
     modalProduct: detailProduct,
     cartSubTotal:0,
@@ -65,10 +65,10 @@ class ProductProvider extends Component {
     });
   };
   increment = (id) => {
-      console.log("Sap prro");
+      console.log("increment method");
   }
   decrement = (id) => {
-      console.log("increment method");
+      console.log("decrement method");
   }
   removeItem=(id) =>{
       console.log("item removed");
