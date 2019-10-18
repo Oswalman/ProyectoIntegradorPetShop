@@ -15,6 +15,7 @@ import Footer from './client/components/footer';
 import Chat from './client/components/chat';
 import Tienda from './client/views/Tienda';
 import Detalles from './client/components/details';
+import DetallesPet from './client/views/detailsMP';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 
@@ -39,6 +40,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         <Route exact path="/details" component={Detalles}/>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Home} />
+        <Route exact path="/DetailsPet" component={DetallesPet} />
         <Route component={NoMatch} />
         
         

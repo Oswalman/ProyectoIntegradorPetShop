@@ -20,13 +20,13 @@ class Search extends Component
         const logueado=(<div>
             <h4 className="txt-info">¿Has perdido tu mascota?</h4>
             <h6 className="txt-info">Permitenos ayudarte ha encontrarla</h6>
-            <Link to="searchRegister" className="btn btn-info">Buscar Mascota</Link>
+            <Link type="button" to="searchRegister" className="btn btn-info">Buscar Mascota</Link>
         </div>)
         const notLogueado=(
         <div style={{textAlign: "center"}} className="container">
             <h4 className="txt-info">¿Has perdido tu mascota?</h4>
             <h6 className="txt-info">Permitenos ayudarte ha encontrarla</h6>
-            <Link to="login" className="btn btn-info">Iniciar sesión</Link>
+            <Link type="button" to="login" className="btn btn-info">Iniciar sesión</Link>
         </div>
         )
 

@@ -1,9 +1,11 @@
 import React from 'react';
-import '../style/style-Search.css'
+import '../style/style-Search.css';
+import { Link } from 'react-router-dom';
 
 
 var images = require.context('../img', true);
 const Imagen = (props) => {
+    localStorage.setItem('lostPet', props.imagen._id);
     return(
         <div className="col-lg-3 col-sm-12 cnt">
             <div className="img">
@@ -11,16 +13,7 @@ const Imagen = (props) => {
             </div>
                 <h5 className="txt-info">Se Busca</h5>
                 <p className="txt-info">{props.imagen.Description}</p>
-                <button type="button" className="btn btn-info">Más detalles</button>
-
-                <input type="checkbox" id="cerrar"></input>
-                <label for="cerrar" id="btn-cerrar">X</label>
-                <div className="container-fluid" id="modal">
-                    <div className="img">
-                        <h2>Se Busca</h2>
-                        <img src={images('./'+props.imagen.foto_pet)} className="fotoMP"></img>        
-                    </div>
-                </div>
+                <Link type="button" to="/DetailsPet" className="btn btn-info">Más detalles</Link> 
         </div>
     );
 }
