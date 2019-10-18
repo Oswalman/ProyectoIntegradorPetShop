@@ -21,7 +21,7 @@ render() {
                                 <h6 className="mb-0">¡Conéctate con nosotros en las redes sociales!</h6>
                             </div>
                         <div className="col-md-6 col-lg-7 text-center text-md-right">
-                          <a href="https://www.facebook.com/UPB-BUS-766221750396402/" style={style} className="icon-facebook">
+                          <a href="https://www.facebook.com/petlockers" style={style} className="icon-facebook">
                           </a>
                         </div>
                     </div>
@@ -54,16 +54,16 @@ render() {
         <h6 className="text-uppercase font-weight-bold">enlaces útiles</h6>
         <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={divStyle}/>
         <p>
-          <a href="#!">Your Account</a>
+          <a href="#!">Perfil</a>
         </p>
         <p>
-          <a href="#!">Become an Affiliate</a>
+          <a href="#!">Unete a la comunidad</a>
         </p>
         <p>
-          <a href="#!">Shipping Rates</a>
+          <a href="#!">Tienda</a>
         </p>
         <p>
-          <a href="#!">Help</a>
+          <a href="#!">Ayuda</a>
         </p>
 
       </div>
@@ -82,7 +82,7 @@ render() {
     </div>
   </div>
   <div className="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="/"> PetSafe</a>
+    <a href="/"> PetLocker</a>
   </div>
   
   </footer>
