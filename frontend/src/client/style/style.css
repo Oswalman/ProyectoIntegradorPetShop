@@ -197,3 +197,20 @@ h1, h2, h3,h4, h5, h6 {
     cursor: pointer;
     margin: 10px;
 }
+.btn-black{
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 0.8rem !important;
+    color: var(--dark);
+    border-radius: 0 !important;
+    border:0.1rem solid var(--dark)!important;
+  }
+  .btn-black:hover{
+    background: var(--dark)!important;
+    color: var(--light) !important;
+  }
+  .cart-icon{
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--yellow)
+  }
