@@ -43,7 +43,6 @@ import { Route, Switch, Redirect } from 'react-router-dom';
         <Route exact path="/DetailsPet" component={DetallesPet} />
         <Route component={NoMatch} />
       </Switch>
-      <Modal></Modal>
       <Chat></Chat>
       <Footer></Footer>
     </div>

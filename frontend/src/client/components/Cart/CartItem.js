@@ -4,7 +4,7 @@ export default function CartItem({ item, value }) {
   const { id, title, img, price, total, count } = item;
   const { increment, decrement, removeItem } = value;
   return (
-    <div className="row my-2 text-capitalize text-center">
+    <div className="row my-2 text-capitalize text-center cajacart">
       <div className="col-10 mx-auto col-lg-2">
         <img
           src={img}
@@ -23,7 +23,6 @@ export default function CartItem({ item, value }) {
       </div>
       <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
         <div className="d-flex justify-content-center">
-          <div>
             <span className="btn btn-black mx-1" onClick={() => decrement(id)}>
               -
             </span>
@@ -31,7 +30,6 @@ export default function CartItem({ item, value }) {
             <span className="btn btn-black mx-1" onClick={() => increment(id)}>
               +
             </span>
-          </div>
         </div>
       </div>
       <div className="col-10 mx-auto col-lg-2">
@@ -40,7 +38,7 @@ export default function CartItem({ item, value }) {
         </div>
       </div>
       <div className="col-10 mx-auto col-lg-2">
-        <strong> item total: $ {total}</strong>
+        <strong> $ {total} USD</strong>
       </div>
     </div>
   );

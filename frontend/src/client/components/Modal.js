@@ -58,10 +58,10 @@ const ModalContainer = styled.div`
     left: 0;
     right: 0;
     bottom;
-    background:rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.3);
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     #modal{
         background: var{--white};
     }

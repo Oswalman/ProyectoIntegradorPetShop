@@ -1,216 +1,222 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: monospace;
+  margin: 0;
+  font-family: monospace;
 }
 
-h1, h2, h3,h4, h5, h6 {
-    font-family: cursive, fantasy ;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: cursive, fantasy;
 }
 
 /* __________________________________| Estilos del header |__________________________________ */
 
 .header {
-    height:70px;
-    background: #0c110e;    
+  height: 70px;
+  background: #0c110e;
 }
 
-.header .contenedor{
-    display: flex;
-    justify-content: space-between;
+.header .contenedor {
+  display: flex;
+  justify-content: space-between;
 }
 
-.logo, .icon-menu{
-    margin: 10px;
-    color: white;
-    
+.logo,
+.icon-menu {
+  margin: 10px;
+  color: white;
 }
-.icon-menu{
-    display: block;
-    widows: 40px;
-    height: 35px;
-    font-size: 35px;
-    background:  #1d9778 ; /*Color del fondo del menu*/
-    color: #fff;
-    text-align: center;
-    line-height:  45px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 15px;
-    z-index: 1;
+.icon-menu {
+  display: block;
+  widows: 40px;
+  height: 35px;
+  font-size: 35px;
+  background: #1d9778; /*Color del fondo del menu*/
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px;
+  z-index: 1;
 }
 /* __________________________________| Estilos del menu |__________________________________ */
-.nav{
-    position: absolute;
-    top:70px;
-    left: -100%;
-    width: 100%;
-    transition: all 0.4s;
+.nav {
+  position: absolute;
+  top: 70px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.4s;
 }
 
-.menu{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    opacity: 0.7;
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0.7;
 }
 
-.menu__link{
-    display: block;
-    padding: 10px;
-    background:  #1d9778 ;
-    text-decoration: none;
-    color: #fff;
+.menu__link {
+  display: block;
+  padding: 10px;
+  background: #1d9778;
+  text-decoration: none;
+  color: #fff;
 }
-.menu__link:hover, .select {
-    background: white;
-    color:  #000 ;
+.menu__link:hover,
+.select {
+  background: white;
+  color: #000;
 }
 .mostrar {
-    left: 0;
-    position: absolute;
-    top:70px;
-    width: 100%;
-    transition: all 0.4s;
+  left: 0;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  transition: all 0.4s;
 }
 
 /* __________________________________| Estilos del banner |__________________________________ */
 
 .banner {
-    margin-top:  -70px;
-    position: relative;
-    z-index: -1000;
-    margin-bottom: 20px;
+  margin-top: -70px;
+  position: relative;
+  z-index: -1000;
+  margin-bottom: 20px;
 }
 
 .banner .contenedor {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 100%;
-    color: white;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 .banner__txt {
-    display: none;
+  display: none;
 }
 
 .banner__img {
-    padding-top: 70px;
+  padding-top: 70px;
 }
 
 /* __________________________________| Estilos de la info |__________________________________ */
 
-
 .info {
-    display: grid; /*con flex se distribuyen horizontalmente y con grid de manera vertical*/
-    padding: 10px;
+  display: grid; /*con flex se distribuyen horizontalmente y con grid de manera vertical*/
+  padding: 10px;
 }
 
 .info__columna {
-    background:  #1d9778 ;
-    color: white;  /*color de la letra de los articulos*/ 
-    padding: 15px;
-    margin-bottom: 30px;
+  background: #1d9778;
+  color: white; /*color de la letra de los articulos*/
+  padding: 15px;
+  margin-bottom: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /*----------------------------------------------------------------------------------*/
- /*--------------------------------|Estilo de Tienda|--------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+/*--------------------------------|Estilo de Tienda|--------------------------------*/
+/*----------------------------------------------------------------------------------*/
 
 /*--------------------------------|Estilo de redes|--------------------------------*/
 
 .redes {
-    display: flex;
-    height: 50px;
-    font-size: 25px;
-    background:  #0c110e ; /*Color del fondo del menu*/
-    color: white;
-    line-height:  80px;
-    margin: 15px;
+  display: flex;
+  height: 50px;
+  font-size: 25px;
+  background: #0c110e; /*Color del fondo del menu*/
+  color: white;
+  line-height: 80px;
+  margin: 15px;
 }
 
 .icon-facebook {
-    height: 35px;
-    text-align: center;
-    line-height: 0px;
-    cursor: pointer;
-    margin: 10px;
+  height: 35px;
+  text-align: center;
+  line-height: 0px;
+  cursor: pointer;
+  margin: 10px;
 }
 
 .icon-twitter {
-    height: 35px;
-    text-align: center;
-    line-height: 0px;
-    cursor: pointer;
-    margin: 10px;
+  height: 35px;
+  text-align: center;
+  line-height: 0px;
+  cursor: pointer;
+  margin: 10px;
 }
 
 .icon-instagrem {
-    height: 35px;
-    text-align: center;
-    line-height: 0px;
-    cursor: pointer;
-    margin: 10px;
+  height: 35px;
+  text-align: center;
+  line-height: 0px;
+  cursor: pointer;
+  margin: 10px;
 }
 
 .icon-youtube {
-    height: 35px;
-    text-align: center;
-    line-height: 0px;
-    cursor: pointer;
-    margin: 10px;
+  height: 35px;
+  text-align: center;
+  line-height: 0px;
+  cursor: pointer;
+  margin: 10px;
 }
 
 .icon-google {
-    height: 35px;
-    text-align: center;
-    line-height: 0px;
-    cursor: pointer;
-    margin: 10px;
+  height: 35px;
+  text-align: center;
+  line-height: 0px;
+  cursor: pointer;
+  margin: 10px;
 }
-.btn-black{
-    background: transparent;
-    text-transform: capitalize;
-    font-size: 0.8rem !important;
-    color: var(--dark);
-    border-radius: 0 !important;
-    border:0.1rem solid var(--dark)!important;
-  }
-  .btn-black:hover{
-    background: var(--dark)!important;
-    color: var(--light) !important;
-  }
-  .cart-icon{
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--yellow)
-  }
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--dark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--dark) !important;
+}
+.btn-black:hover {
+  background: var(--dark) !important;
+  color: var(--light) !important;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--yellow);
+}
+.caja {
+  font-family: sans-serif;
+  margin: 50px auto;
+  width: 950px;
+  border: 0.04rem solid rgba(25, 0, 255, 0.2);
+  font-size: 18px;
+  font-weight: 400;
+  color: #f10000;
+  background: #ffffff;
+}
+.cajacart {
+  font-family: sans-serif;
+  border: 0.04rem solid rgba(25, 0, 255, 0.2);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  background: #ffffff;
+}

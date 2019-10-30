@@ -78,7 +78,7 @@ const ProductWrapper = styled.div`
       box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
     }
     .card-footer {
-      background: rgba(247, 247, 247);
+      background: rgba(166, 247, 166);
     }
   }
   .img-container {
@@ -98,7 +98,7 @@ const ProductWrapper = styled.div`
     padding: 0.2rem 0.4rem;
     background: var(--orange);
     border: none;
-    color: var(--white);
+    color: var(--black);
     font-size: 1.4rem;
     border-radius: 0.5rem 0 0 0;
     transform: translate(100%, 100%);
@@ -108,7 +108,7 @@ const ProductWrapper = styled.div`
     transform: translate(0, 0);
   }
   .cart-btn:hover {
-    color: var(--orange);
+    color: var(--white);
     cursor: pointer;
   }
 `;
