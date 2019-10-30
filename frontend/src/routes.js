@@ -20,7 +20,6 @@ import Cart from './client/components/Cart/cart';
 import DetallesPet from './client/views/detailsMP';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-
  const Routes = () => {
   return (
     <div>
