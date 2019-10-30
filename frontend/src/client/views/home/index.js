@@ -11,7 +11,7 @@ import foto3 from '../../img/3.png'
 
 const Home = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{maxWidth:"999px"}}>
  <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
   <ol className="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>

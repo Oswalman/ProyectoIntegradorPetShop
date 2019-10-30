@@ -34,6 +34,7 @@ export default class index extends Component {
                     <tr>
                     <th scope="col">Post_Id</th>
                     <th scope="col">Nombre mascota</th>
+                    <th scope="col">Fecha</th>
                     <th scope="col">Opción</th>
                     
                     </tr>
@@ -45,13 +46,14 @@ export default class index extends Component {
                         key={lost._id}
                         id={lost._id}
                         Nom_Pet={lost.Nom_Pet}
+                        Fecha={lost.createdAt}
                       />
                     ))}</tbody>
                     </table>
 
                 </div>
                 <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Actualizar</a>
                 </p>
                 </div>
                 

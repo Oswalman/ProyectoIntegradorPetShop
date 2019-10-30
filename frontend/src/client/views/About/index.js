@@ -48,7 +48,7 @@ class About extends React.Component
                     <div className="card-header" id="headingOne">
                       <h2 className="mb-0">
                         <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          <h2>MISION</h2>
+                          <h2>MISIÓN</h2>
                         </button>
                       </h2>
                     </div>                          
@@ -133,7 +133,7 @@ class About extends React.Component
                                     </div>
                                     <div class="col-lg-3">
                                             <div class="d-flex flex-row justify-content-center">
-                                                    <a href="https://www.instagram.com/oswalman1/" target="_blank">
+                                                    <a href="https://github.com/Oswalman" target="_blank">
                                                         <i class="fab fa-github-alt"></i>
                                                     </a>
                                             </div>
@@ -217,7 +217,7 @@ class About extends React.Component
                                             </div>
                                             <div class="col-lg-3">
                                                     <div class="d-flex flex-row justify-content-center">
-                                                            <a href="https://github.com/Andresxv" target="_blank">
+                                                            <a href="https://github.com/PapiCarryFabs" target="_blank">
                                                                 <i class="fab fa-github-alt"></i>
                                                             </a>
                                                     </div>
@@ -259,7 +259,7 @@ class About extends React.Component
                                             </div>
                                             <div class="col-lg-3">
                                                     <div class="d-flex flex-row justify-content-center">
-                                                            <a href="https://github.com/Andresxv" target="_blank">
+                                                            <a href="https://github.com/PapiCarryShongo" target="_blank">
                                                                 <i class="fab fa-github-alt"></i>
                                                             </a>
                                                     </div>

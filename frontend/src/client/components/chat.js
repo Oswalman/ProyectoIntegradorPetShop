@@ -12,7 +12,8 @@ export default class chat extends Component {
         this.state = {boolean: true,
             message:'',
             request:'',
-            item:[]
+            item:[],
+        
         
         };
         this.toggleSidenav=this.toggleSidenav.bind(this);
@@ -23,29 +24,34 @@ export default class chat extends Component {
     sendSocketIO() {
         const decoded = jwt_decode(localStorage.usertoken)
         console.log("Envio mensaje")
+        console.log(this.state.message)
         socket.emit('chat:message',
         {message:this.state.message,
         username:decoded['NombreCliente']
     });
+
     this.requeSocketIo();
     }
     requeSocketIo(){
-     
-       
+        var item2=this.state.item
+             var user=''
+            var message=''
+        
         socket.on('chat:message', (data)=>{
             
-            const item=this.state.item
-            const user=data["username"]
-            const message=data["message"]
-            item.push({user,message})
-          
-            this.setState({request:data})
-            console.log("data")
-            console.log(this.state.request);
-            console.log("item")
-            console.log(item);
+           
+            user=data["username"]
+             message=data["message"]
+             item2.push({user,message})
+             this.setState({item:item2})
+           
+            
             
         })
+      
+       
+        
+      
     }
 
     toggleSidenav() {
@@ -58,7 +64,9 @@ export default class chat extends Component {
     render() {
         const logueado=(<div className="container-fluid bg-light" id="chat-window">
             <div className="container-fluid" id="output">
-            {this.state.item.map((item)=>{
+         {this.state.item.map((item)=>{
+             console.log(this.state.item)
+            
                 return(
                     <Message
                     usuario={item.user}
@@ -71,7 +79,7 @@ export default class chat extends Component {
            
            </div>
         <div className="container-fluid" id="actions"></div>
-        <input type="text" className="form-control" onChange={e=>this.SendMessage(e)} name="message"  id="message" placeholder="Message"></input>
+        <input type="text" className="form-control"  onChange={this.SendMessage} name="message"  id="message" placeholder="Message"></input>
         <button className="btn bg-primary" onClick={this.sendSocketIO}    id="send">Send</button>
         </div>)
 
