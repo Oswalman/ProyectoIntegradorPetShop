@@ -14,7 +14,7 @@ import foto9 from "../../img/img2/shop.jpg";
 class About extends React.Component {
   render() {
     return (
-      <div className="row container">
+      <div className="row container" style={{margin: "0 auto"}}>
         <header className="main-header">
           <div className="background-overlay text-white py-5">
             <div className="container">
@@ -207,7 +207,7 @@ class About extends React.Component {
                       />
                     </center>
                     <h3>Andres Felipe Herrera Jerez</h3>
-                    <p>Testing</p>
+                    <p>Desarrollador Frontend</p>
                     <div class="row justify-content-center">
                       <div class="col-lg-3">
                         <div class="d-flex flex-row justify-content-center">
@@ -300,7 +300,7 @@ class About extends React.Component {
                       />
                     </center>
                     <h3>Jhon Edinson Castañeda Oviedo</h3>
-                    <p>Desarrollador Frontend</p>
+                    <p>Desarrollador Backend</p>
                     <div class="row justify-content-center">
                       <div class="col-lg-3">
                         <div class="d-flex flex-row justify-content-center">
